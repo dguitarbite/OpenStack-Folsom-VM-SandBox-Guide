@@ -2,11 +2,9 @@ OpenStack-Folsom-VM-SandBox-Guide
 =================================
 
 You are at - How to Install OpenStack Folsom in Virtual Box 
-**To Go to the Installation Gudie click ![here](https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/blob/VirtualBox/Sand-box-your-VMs.rst)**
 
-* For those who want to use `Virtual Box` for `OpenStack Sandboxing`, can check out the following link 
- 
-   * ![OpenStack-Folsom-VM-SandBoxing-Guide with Virtual Box](https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/tree/VirtualBox)
+
+* **To Go to the Installation Gudie click ![here](https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/blob/VirtualBox/Sand-box-your-VMs.rst)**
 
 
 * For those who want to use `VMware` for `OpenStack Sandboxing`, can check out the following link 
