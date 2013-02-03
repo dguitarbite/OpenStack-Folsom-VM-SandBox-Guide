@@ -72,13 +72,13 @@ Status: Beta
 
 1. Requirements
 ====================
-* Recommended Requirements:
+* Recommended Requirements
 
 
     :VT Enabled PC:Intel ix or Amd QuadCore
     :4GB Ram:DDR2/DDR3 
 
-* Minimum Requirements:
+* Minimum Requirements
 
 
     :Non-VT PC's : Intel Core 2 Duo or Amd Dual Core
@@ -87,15 +87,15 @@ Status: Beta
 * If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker** 
 
 
-    ::
-          $sudo apt-get install cpu-checker
-          $sudo kvm-ok
+::
+    $sudo apt-get install cpu-checker
+    $sudo kvm-ok
 
 *  your pc does not support VT it will show 
 
-    ::
-          INFO: Your CPU does not support KVM extensions
-          KVM acceleration can NOT be used
+::
+      INFO: Your CPU does not support KVM extensions
+      KVM acceleration can NOT be used
         
 * Don't worry you will still be able to use Virtual Box but it will be very slow, so I must consider putting the requirements to be Patience or VT enabled processor ;).
 
@@ -108,8 +108,7 @@ There are two different types of configurations that are possible for setting up
 ------------
 * Bridged Connection connects your VM as if its a physical machine. This means that your machine will be able to use internet and can be traced from other machines from internet. So if your network has a physical switch or you can spare a few IP addresses then I would suggest bridged connection.
 
-* Advantage of bridged connections is that your networks remain the same and you are free of the hassels of creating
-virtual networks.
+* Advantage of bridged connections is that your networks remain the same and you are free of the hassels of creating virtual networks.
 
 
     :Node Role: NICs
