@@ -10,10 +10,10 @@ OpenStack-Folsom-VM-SandBox-Guide
  * ![Virtual Box] (https://www.virtualbox.org/) is OpenSource virtualization software which is a bit noob-proof and agrees more with Geeks. But it supports more options and provides an API for managing, controlling Virtual Machines and other related settings.
   
  
- * For those who want to use VMware for OpenStack Sandboxing, you can check out the following link :
+ * For those who want to use `VMware` for `OpenStack Sandboxing`, you can check out the following link :
    ![OpenStack-Folsom-VM-SandBoxing-Guide with VMware](https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/tree/VMware)
   
- * For those who want to use Virtual Box for OpenStack Sandboxing, you can check out the following link :
+ * For those who want to use `Virtual Box` for `OpenStack Sandboxing`, you can check out the following link :
    ![OpenStack-Folsom-VM-SandBoxing-Guide with Virtual Box](https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/tree/VirtualBox)
   
  * For Advanced Users who know all about virtualziation - or do not want to use Virtual Machines for OpenStack deployment should check out :
