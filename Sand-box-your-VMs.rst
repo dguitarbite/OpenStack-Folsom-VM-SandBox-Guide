@@ -74,6 +74,9 @@ Status: Beta
 ====================
 
 Recommended Requirements.
+:abc:basad
+:asdasd:Asdasf
+
 :VT Enabled PC : Intel ix or Amd QuadCore
 :4GB Ram: DDR2/DDR3 
 
