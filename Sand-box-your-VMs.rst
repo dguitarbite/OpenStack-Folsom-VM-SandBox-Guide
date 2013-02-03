@@ -82,15 +82,15 @@ Minimum Requirements.
 :2GB Ram:DDR2/DDR3
 
 * If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
-::
-  $sudo apt-get install cpu-checker
-  $sudo kvm-ok
+  ::
+    $sudo apt-get install cpu-checker
+    $sudo kvm-ok
   
 * If your pc does not support VT it will show
-::
-  INFO: Your CPU does not support KVM extensions
-  KVM acceleration can NOT be used
-        
+  ::
+    INFO: Your CPU does not support KVM extensions
+    KVM acceleration can NOT be used
+          
 * Don't worry you will still be able to use Virtual Box but it will be very slow, so I must consider putting the requirements to be Patience or VT enabled processor ;).
 
 * Well there are many ways to configure you OpenStack installation but I am going to follow `OpenStack-Folsom-Install-guide <https://github.com/mseknibilel/OpenStack-Folsom-Install-guide/blob/master/OpenStack_Folsom_Install_Guide_WebVersion.rst>`_
