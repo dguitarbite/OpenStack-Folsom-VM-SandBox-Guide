@@ -72,20 +72,20 @@ Status: Beta
 
 1. Requirements
 ====================
-Recommended Requirements 
+* Recommended Requirements 
 :VT Enabled PC:Intel ix or Amd QuadCore
 :4GB Ram:DDR2/DDR3 
 
-Minimum Requirements
+* Minimum Requirements
 :Non-VT PC's : Intel Core 2 Duo or Amd Dual Core
 :2GB Ram:DDR2/DDR3
 
-If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
+* If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
 ::
         $sudo apt-get install cpu-checker
         $sudo kvm-ok
 
-if your pc does not support VT it will show 
+*  your pc does not support VT it will show 
 ::
         INFO: Your CPU does not support KVM extensions
         KVM acceleration can NOT be used
@@ -99,11 +99,11 @@ There are two different types of configurations that are possible for setting up
 
 **1. Bridged Connections :** 
 ------------
-Bridged Connection connects your VM as if its a physical machine. This means that your machine will be able to use
+* Bridged Connection connects your VM as if its a physical machine. This means that your machine will be able to use
 internet and can be traced from other machines from internet. So if your network has a physical switch or you can
 spare a few IP addresses then I would suggest bridged connection
                             
-Advantage of bridged connections is that your networks remain the same and you are free of the hassels of creating
+* Advantage of bridged connections is that your networks remain the same and you are free of the hassels of creating
 virtual networks.
 
 
@@ -120,10 +120,10 @@ virtual networks.
 
 **2. Host Only Connections:** 
 ------------
-Host only connections provide an internet network between your host and the Virtual Machine instances
+* Host only connections provide an internet network between your host and the Virtual Machine instances
 up and running on your host machine. This network is not traceable by other networks.
 
-The following are the host only connections that you will be setting up later on :
+* The following are the host only connections that you will be setting up later on :
 
   1. vboxnet1 - Openstack Management Network - Host static IP 100.10.10.1 
   2. vboxnet2 - VM Conf. Network - Host Static IP 100.20.20.1
@@ -135,10 +135,10 @@ The following are the host only connections that you will be setting up later on
 2. Setup Your VM Environment
 ==============
 
-Well a few of these sections will be full of screenshots because it is essential for people to understand some of the networking
+* Well a few of these sections will be full of screenshots because it is essential for people to understand some of the networking
 related configurations so please bear with me since its quite necessary to put it up.
 
-Before you can start configuring your Environment you need to download some of the following stuff:
+* Before you can start configuring your Environment you need to download some of the following stuff:
 
   1. `Oracle Virtual Box <https://www.virtualbox.org/wiki/Downloads>`_
         Note: You cannot set up a amd64 VM on a x86 machine. 
@@ -158,7 +158,7 @@ Before you can start configuring your Environment you need to download some of t
 
 **Note:** Even Though Im using Ubuntu as Host, the same is applicable to Windows, Mac and other Linux Hosts. 
 
-If you have i5 or i7 2nd gen processor you can have VT technology inside VM's provided by VmWare. This means that your OpenStack
+* If you have i5 or i7 2nd gen processor you can have VT technology inside VM's provided by VmWare. This means that your OpenStack
 nodes(Which are in turn VM's) will give positive result on KVM-OK. (I call it - Nesting of type-2 Hypervisors).
 Rest of the configurations remain same except for the UI and few other trivial differences.
 
@@ -275,13 +275,13 @@ Rest of the configurations remain same except for the UI and few other trivial d
 
 4. Install SSH and FTP
 ==============
-I feel that there is a need to install SSH and FTP so that you could use your remote shell to login into the machine and use
+* I feel that there is a need to install SSH and FTP so that you could use your remote shell to login into the machine and use
 your terminal which is more convenient that using the Virtual Machines tty through the Virtual Box's  UI. You get a few added
 comforts like copy - paste commands into the remote terminal which is not possible directly on VM.
 
-FTP is for transferring files to and fro ... you can also use SFTP or install FTPD on both HOST and VM's.
+* FTP is for transferring files to and fro ... you can also use SFTP or install FTPD on both HOST and VM's.
 
-Installation of SSH and FTP with its configuration is out of scope of this GUIDE and I may put it up but it depends upon my free time.
+* Installation of SSH and FTP with its configuration is out of scope of this GUIDE and I may put it up but it depends upon my free time.
 If someone wants to contribute to this - please do so. 
 
 **Note:** Please set up the Networks from inside the VM before trying to SSH and FTP into the machines. I would suggest setting
@@ -290,7 +290,7 @@ it up at once just after the installation of the Server on VM's is over.
 
 5. Install Your VM's Instances
 ==============
-During Installation of The Operating Systems you will be asked for Custom Software to Install , if you are confused or not sure about this, 
+* During Installation of The Operating Systems you will be asked for Custom Software to Install , if you are confused or not sure about this, 
 just skip this step by pressing **Enter Key** without selecting any of the given Options. 
 
 **Warning -** Please do not install any of the other packages except for which are mentioned below unless you know what you are doing. I have experienced unwanted errors, package conflicts ... due to the same.
@@ -307,7 +307,7 @@ just skip this step by pressing **Enter Key** without selecting any of the given
 6. Its about to get sticky
 ==============
 
-Well there are a few warnings that I must give you out of experience due to stupid habits that normal Users like me have -
+* Well there are a few warnings that I must give you out of experience due to stupid habits that normal Users like me have -
 1. Never Shutdown your Virtual Machine - just save its state Virtual Box and VmWare both provide it.
       In past this has broken NOVA packages , NOVA database, other errors have risen. I had to go restart each and every NOVA service on Control and Compute node. Believe me sometimes they can be pain in ass as they refuse to start up on reboot.
       Once you configure up the messy part of Quantum Floating Ip's etc., honestly you dont want to re do it cause the settings get lost on reboot/shutdown.
@@ -322,7 +322,7 @@ Well there are a few warnings that I must give you out of experience due to stup
     // Now Ping again
     $ping google.com
 
-This should reconnect your network about 99% of the times. If you are really unlucky you must be having some other problems or your internet connection itself is not functioning... well try to avoid immature decisions. Believe me you dont want to mess up your existing setup.
+* This should reconnect your network about 99% of the times. If you are really unlucky you must be having some other problems or your internet connection itself is not functioning... well try to avoid immature decisions. Believe me you dont want to mess up your existing setup.
 
 **If you have Reached till here - Congrats. I would suggest a coffee break because now the Virtual Machines installation is nearly over and OpenStack's installation part is goign to start**
 -------------
