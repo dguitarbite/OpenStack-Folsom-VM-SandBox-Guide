@@ -74,27 +74,13 @@ Status: Beta
 ====================
 
 Recommended Requirements.
-<table>
-<tr>
-  <td> VT Enabled PC </td>
-  <td> Intel ix or Amd QuadCore </td>
-</tr>
-<tr>
-  <td> 4GB Ram </td>
-  <td> DDR2/DDR3 <td>
-</tr>
-</table>
+:VT Enabled PC :Intel ix or Amd QuadCore
+:4GB Ram :DDR2/DDR3
+
 Minimum Requirements.
-<table>
-<tr>
-  <td> Non-VT PC's </td>
-  <td> Intel Core 2 Duo or Amd Dual Core </td>
-</tr>
-<tr>
-  <td> 2GB Ram </td>
-  <td> DDR2/DDR3 </td>
-</tr>
-</table>
+:Non-VT PC's :Intel Core 2 Duo or Amd Dual Core
+:2GB Ram :DDR2/DDR3
+
 * If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
   ::
     $sudo apt-get install cpu-checker
