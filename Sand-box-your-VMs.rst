@@ -168,33 +168,34 @@ There are two different types of configurations that are possible for setting up
 
   **Note:** If you are using Bridged Connections Please Ignore this section.
 
-  Step 1:
+* Step 1:
     Start **Virtual Box**
 
-  Step 2:
+* Step 2:
     **File>Preferences** 
     Select **Network** Option.
-  Step 3: 
+* Step 3: 
     Click on **Create Host Only Networks** - Create three networks. They will be automatically named as
       vboxnet0, vboxnet1, vboxnet2
         
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/1.%20Virtual%20Network/1-Create%20Host%20only%20Network.png
 
-  Step 4:
-    Select vboxnet0 and click on edit, select **Adapter Tab**
-      Set the IPv4 address as  **100.10.10.1**
-      Leave the other options as it is.
+* Step 4:
+  *  Select vboxnet0 and click on edit, select **Adapter Tab**
+       Set the IPv4 address as  **100.10.10.1**
+        Leave the other options as it is.
       
-      .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/1.%20Virtual%20Network/2-Give%20Static%20Ip%20to%20Host.png
+     .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/1.%20Virtual%20Network/2-Give%20Static%20Ip%20to%20Host.png
     
-    Select **DHCP Server** tab
-      Unselect the **Enable Server** option
+  *  Select **DHCP Server** tab
+       Unselect the **Enable Server** option
       
-      .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/1.%20Virtual%20Network/3-%20Configure%20DHCP.png
+     .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/1.%20Virtual%20Network/3-%20Configure%20DHCP.png
 
 **2. Set up Network Interface Cards(NIC) on Virtual Machines** :
 ------------      
-  Step 1:
+  
+* Step 1:
     Control Node
       Create a new Virtual Machine ... select the appropriate options
       
@@ -225,7 +226,7 @@ There are two different types of configurations that are possible for setting up
       
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/5%20-control-nw3.png
 
-  Step 2:
+* Step 2:
     Network Node
       Create a new Virtual Machine ... configure it similar to the Control Node except for the networking part.
       
@@ -236,7 +237,7 @@ There are two different types of configurations that are possible for setting up
           2. eth1 - OpenStack VM Conf. Network - 100.20.20.52 (IP addresses are not allocated now)
           3. eth2 - Expose OpenStack to external networks - 192.168.100.52 (IP addresses are not allocated now)
           4. eth3 - NAT - for internet connection.
-  Step 3:
+* Step 3:
     Compute Node:
       Create a new Virtual Machine ... configure it as follows:
         If possible give it about **1gb - 4 gb of ram** depending how much extra RAM you have
