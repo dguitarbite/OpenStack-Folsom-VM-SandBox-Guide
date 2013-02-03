@@ -1,5 +1,5 @@
 ==========================================================
-  OpenStack Folsom Install Guide
+  OpenStack Folsom VM SandBox and Install Guide
 ==========================================================
 
 :Version: 0.3
@@ -71,34 +71,30 @@ Status: Beta
 
 
 1. Requirements
-====================
+=============
 
---------------------------
-
-Recommended Requirements.
-
-
-  :VT Enabled PC:Intel ix or Amd QuadCore
-  :4GB Ram:DDR2/DDR3 
-
-Minimum Requirements.
-
-
-  :Non-VT PC's : Intel Core 2 Duo or Amd Dual Core
-  :2GB Ram:DDR2/DDR3
-
-If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
-
-::
-      $sudo apt-get install cpu-checker
-      $sudo kvm-ok
+* Recommended Requirements.
   
-If your pc does not support VT it will show
 
-::
-      INFO: Your CPU does not support KVM extensions
-      KVM acceleration can NOT be used
-        
+  :VT Enabled PC: Intel ix or Amd QuadCore
+  :4GB Ram: DDR2/DDR3
+
+* Minimum Requirements.
+  
+  
+  :Non-VT PC's: Intel Core 2 Duo or Amd Dual Core
+  :2GB Ram: DDR2/DDR3
+
+* If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
+  ::
+    $sudo apt-get install cpu-checker
+    $sudo kvm-ok
+  
+* If your pc does not support VT it will show
+  ::
+    INFO: Your CPU does not support KVM extensions
+    KVM acceleration can NOT be used
+          
 * Don't worry you will still be able to use Virtual Box but it will be very slow, so I must consider putting the requirements to be Patience or VT enabled processor ;).
 
 * Well there are many ways to configure you OpenStack installation but I am going to follow `OpenStack-Folsom-Install-guide <https://github.com/mseknibilel/OpenStack-Folsom-Install-guide/blob/master/OpenStack_Folsom_Install_Guide_WebVersion.rst>`_
@@ -113,10 +109,10 @@ There are two different types of configurations that are possible for setting up
 * Advantage of bridged connections is that your networks remain the same and you are free of the hassels of creating virtual networks.
 
 
-    :Node Role: NICs
-    :Control Node: eth0 (100.10.10.51), eth1 (192.168.100.51)
-    :Network Node: eth0 (100.10.10.52), eth1 (100.20.20.52), eth2 (192.168.100.52)
-    :Compute Node: eth0 (100.10.10.53), eth1 (100.20.20.53)
+  :Node Role: NICs
+  :Control Node: eth0 (100.10.10.51), eth1 (192.168.100.51)
+  :Network Node: eth0 (100.10.10.52), eth1 (100.20.20.52), eth2 (192.168.100.52)
+  :Compute Node: eth0 (100.10.10.53), eth1 (100.20.20.53)
 
 
 
