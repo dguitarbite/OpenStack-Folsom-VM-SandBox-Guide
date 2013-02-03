@@ -62,32 +62,37 @@ Virtualization:
   You can access the API's for advanced networking `here <https://www.virtualbox.org/wiki/Advanced_Networking_Linux>`_.
 
 Linux:
-  1.You will need some basic knowledge of `Linux` and `BASH Shell` otherwise you will go through tremendous torture of blindly following these Guides and if in case come to an error/dead lock, you will get stuck for silly reasons. There are many books, docs available and I don't know which one to recommend so please `Google <https://www.google.com/>`_ it.
+  1.You will need some basic knowledge of Linux` and Shell Programming otherwise you will go through tremendous torture of blindly following these Guides and if in case you end up with an error/dead lock, you will get stuck for silly reasons. There are many books, docs available and I don't know which one to recommend so please `Google <https://www.google.com/>`_ it.
 
 
-Version 0.2
+Version 0.3
 
 Status: Beta
 
 
 1. Requirements
 ====================
-Basic Requirements 
+Recommended Requirements 
 :VT Enabled PC:Intel ix or Amd QuadCore
 :4GB Ram:DDR2/DDR3 
+
+Minimum Requirements
+:Non-VT PC's : Intel Core 2 Duo or Amd Dual Core
+:2GB Ram:DDR2/DDR3
 
 If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
 ::
         $sudo apt-get install cpu-checker
         $sudo kvm-ok
+
 if your pc does not support VT it will show 
 ::
         INFO: Your CPU does not support KVM extensions
         KVM acceleration can NOT be used
         
-Don't worry you will still be able to use Virtual Box but it will be very slow, so I must consider putting the requirements to be Patience or VT enabled processor ;).
+* Don't worry you will still be able to use Virtual Box but it will be very slow, so I must consider putting the requirements to be Patience or VT enabled processor ;).
 
-Well there are many ways to configure you OpenStack installation but I am going to follow `OpenStack-Folsom-Install-guide <https://github.com/mseknibilel/OpenStack-Folsom-Install-guide/blob/master/OpenStack_Folsom_Install_Guide_WebVersion.rst>`_
+* Well there are many ways to configure you OpenStack installation but I am going to follow `OpenStack-Folsom-Install-guide <https://github.com/mseknibilel/OpenStack-Folsom-Install-guide/blob/master/OpenStack_Folsom_Install_Guide_WebVersion.rst>`_
 
 
 There are two different types of configurations that are possible for setting up of Virtual Networks.
@@ -141,14 +146,20 @@ Before you can start configuring your Environment you need to download some of t
   2. `Ubuntu 12.04 Server or Ubuntu 12.10 Server <http://www.ubuntu.com/download/server>`_
         Note: You need a x86 image for VM's if kvm-ok fails, even though you are on amd64 machine.
 
-  3. My host machine is Ubuntu 12.04 amd64 (Core2duo (VT not supported)) and Ubuntu 12.10 amd64 (Intel i5 2nd gen (VT enabled))
-        Please do consider using quad core processors as they are VT enabled. Which is required for virtualization.
-        At the worst case go for a dual core processor.
+  3. For testing I'm Using these machines - 
+        * **Machine 1** -My host machine is Ubuntu 12.04 amd64 (Core2duo (VT not supported),4GB Ram DDR2)
+          * For Testing this guide on a Non-VT enabled Machine.
+        * **Machine 2** -Ubuntu 12.10 amd64 (Intel i5 2nd gen (VT enabled), 8GB Ram DDR3)
+          * For Testing this guide on a VT enabled Machine.
+        **Note :** Im using only one machine for Deploying OpenStack. These two machines are for Testing.
 
-**Note:** Even Though Im using Ubuntu as Host, the same is applicable to Windows or other Linux Hosts. 
+        * Please do consider using quad core processors as they are VT enabled. Which is required for virtualization.
+          At the worst case go for a dual core processor.
+
+**Note:** Even Though Im using Ubuntu as Host, the same is applicable to Windows, Mac and other Linux Hosts. 
 
 If you have i5 or i7 2nd gen processor you can have VT technology inside VM's provided by VmWare. This means that your OpenStack
-nodes will give positive result on KVM-OK. (Nesting of type-2 Hypervisors).
+nodes(Which are in turn VM's) will give positive result on KVM-OK. (I call it - Nesting of type-2 Hypervisors).
 Rest of the configurations remain same except for the UI and few other trivial differences.
 
 3. Configure Virtual Networks 
@@ -191,7 +202,7 @@ Rest of the configurations remain same except for the UI and few other trivial d
       
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/1-%20Basic%20Info.png
     
-    Ram Required for this node is 512 MB, if you have more ram feel free to allocate itbut remember that your Compute Node needs
+    Ram Required for this node is 512 MB (minimum recommended for Ubuntu Server 12.XX), if you have more ram feel free to allocate itbut remember that your Compute Node needs
     the highest amount of RAM and Processor so I usually save up for the compute node...reduce the processor allocation pool
       
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/2-%20Resource%20Allocation.png
@@ -255,9 +266,9 @@ Rest of the configurations remain same except for the UI and few other trivial d
 **Note:** You can select the network interface orders as per your choice but to make life simpler I have followed `OpenStack-Folsom-Install-Guide by  SkiBLE mseknibilel <https://github.com/mseknibilel/OpenStack-Folsom-Install-guide>`_ 
 
 **Warning:**  You have to select the MAC addresses of the NIC cards before you start the installation of Ubuntu server. And make sure
-              that the MAC address are not changed once you start the installation. This leads to Network Interface variable name registory error
+              that the MAC address are not changed once you start the installation. This leads to **Network Interface variable name registory error**
               inside the kernel network configurations and you will have to manually edit it , let alone the hell of SSH Key conflicts due
-              to change in MAC address after installation of the OS's and OpenStack packages on your VM's.
+              to change in MAC address after installation of the OS's and OpenStack packages on your VM's. Believe me you will be already saturated by OpenStack and Virtualization setups, you want to keep it simple.
             
 
 
@@ -266,12 +277,12 @@ Rest of the configurations remain same except for the UI and few other trivial d
 ==============
 I feel that there is a need to install SSH and FTP so that you could use your remote shell to login into the machine and use
 your terminal which is more convenient that using the Virtual Machines tty through the Virtual Box's  UI. You get a few added
-comforts like copy - paste stuff into the remote terminal which is not possible directly on VM.
+comforts like copy - paste commands into the remote terminal which is not possible directly on VM.
 
 FTP is for transferring files to and fro ... you can also use SFTP or install FTPD on both HOST and VM's.
 
 Installation of SSH and FTP with its configuration is out of scope of this GUIDE and I may put it up but it depends upon my free time.
-If someone wants to contribute to this - please welcome. 
+If someone wants to contribute to this - please do so. 
 
 **Note:** Please set up the Networks from inside the VM before trying to SSH and FTP into the machines. I would suggest setting
 it up at once just after the installation of the Server on VM's is over.
@@ -279,6 +290,10 @@ it up at once just after the installation of the Server on VM's is over.
 
 5. Install Your VM's Instances
 ==============
+During Installation of The Operating Systems you will be asked for Custom Software to Install , if you are confused or not sure about this, 
+just skip this step by pressing **Enter Key** without selecting any of the given Options. 
+
+**Warning -** Please do not install any of the other packages except for which are mentioned below unless you know what you are doing. I have experienced unwanted errors, package conflicts ... due to the same.
 
 1. Control Node: Install **SSH server** when asked for **Custom Software to Install**. Rest of the packages are not required and may
    come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
@@ -309,6 +324,8 @@ Well there are a few warnings that I must give you out of experience due to stup
 
 This should reconnect your network about 99% of the times. If you are really unlucky you must be having some other problems or your internet connection itself is not functioning... well try to avoid immature decisions. Believe me you dont want to mess up your existing setup.
 
+**If you have Reached till here - Congrats. I would suggest a coffee break because now the Virtual Machines installation is nearly over and OpenStack's installation part is goign to start**
+-------------
 
 7. Controller Node
 ==============
