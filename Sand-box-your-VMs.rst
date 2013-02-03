@@ -71,13 +71,13 @@ Status: Beta
 
 
 1. Requirements
-====================
+=============
 
-Recommended Requirements.
+* Recommended Requirements.
 :VT Enabled PC :Intel ix or Amd QuadCore
 :4GB Ram :DDR2/DDR3
 
-Minimum Requirements.
+* Minimum Requirements.
 :Non-VT PC's :Intel Core 2 Duo or Amd Dual Core
 :2GB Ram :DDR2/DDR3
 
