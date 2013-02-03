@@ -2,9 +2,9 @@
   OpenStack Folsom Install Guide
 ==========================================================
 
-:Version: 0.2
+:Version: 0.3
 :Source: https://github.com/mseknibilel/OpenStack-Folsom-Install-guide
-:Keywords: Multi node OpenStack, Folsom, Quantum, Nova, Keystone, Glance, Horizon, Cinder, OpenVSwitch, KVM, Ubuntu Server 12.10 (64 bits),Virtual Box, Sand-Boxing, VmWare, Virtual Networks.
+:Keywords: Multi node OpenStack, Folsom, Quantum, Nova, Keystone, Glance, Horizon, Cinder, OpenVSwitch, KVM, Ubuntu Server 12.10 (64 bits), Ubuntu Server 12.04, Virtual Box, Sand-Boxing, VmWare, Virtual Networks, QEmu, Kvm.
 
 Authors
 ==========
@@ -32,10 +32,10 @@ Table of Contents
 
 0. What is it?
 ==============
-Well this guide will help you to setup your own OpenStack Cloud on Virtual Machines and Virtual Networks. 
+Well this guide will help you to setup your own OpenStack Cloud on Virtual Machines with Virtual Networks. 
 These Virtual Machines and Virtual Networks will be given equal privilege as a physical machine on a physical network.
 
-This Guide is not responsible for teaching OpenStack, Networking , Virtualization and Linux related concepts.
+**Note :** This Guide is not responsible for teaching OpenStack, Networking , Virtualization and Linux related concepts.
 
 For learning more follow these links:
 
@@ -49,20 +49,20 @@ OpenStack:
 
 
 Networking:
-  1.Basic Networking concepts are necessary but can be ignored, if you want to dig into networking I would 
+  1.Basic Networking concepts are necessary but can be ignored, if you want to dig into the field of networking I would 
   suggest `Computer Networks (5th Edition) by Andrew S. Tanenbaum <http://www.amazon.com/Computer-Networks-5th-Andrew-Tanenbaum/dp/0132126958>`_  is an awesome one to learn networking 
   
   2.For learning Virtual Networking or Networking for Virtual Machines the following guide by Virtual Box `here <http://www.virtualbox.org/manual/ch06.html>`_  should suffice.
   **Note :** This is required as further in the guide these Concepts will be handy and you need to know what kind of networks you are setting up as there will be nesting of networks , meaning Virtual Networks inside Virtual Networks.
 
 Virtualization:
-  1.Learn, go through the Virtual Box Guide `here <http://www.virtualbox.org/manual/UserManual.html>`_, this should be sufficient to provide a fair idea on how to Virtualization.
+  1.To Learn Virtualization, go through the Virtual Box Guide `here <http://www.virtualbox.org/manual/UserManual.html>`_, this should be sufficient to provide a fair idea on Virtualization relateed concepts.
   
   2.Virtual Box provides User Interface and API for using it, although API will provide more flexibility, UI will have lesser learning curve, its up to you. I will try to provide both if time permits but I have to remind my-selves that this guide is meant for OpenStack sand-boxing :).
   You can access the API's for advanced networking `here <https://www.virtualbox.org/wiki/Advanced_Networking_Linux>`_.
 
 Linux:
-  1.You will need some basic knowledge of Linux otherwise you will go through tremendous torture of blindly following these Guides and if in case come to an error/dead lock, you will get stuck for silly reasons. There are many books, docs available and I don't know which one to recommend so please `Google <https://www.google.com/>`_ it.
+  1.You will need some basic knowledge of `Linux` and `BASH Shell` otherwise you will go through tremendous torture of blindly following these Guides and if in case come to an error/dead lock, you will get stuck for silly reasons. There are many books, docs available and I don't know which one to recommend so please `Google <https://www.google.com/>`_ it.
 
 
 Version 0.2
