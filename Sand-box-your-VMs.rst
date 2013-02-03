@@ -73,8 +73,6 @@ Status: Beta
 1. Requirements
 ====================
 
---------------------------
-
 Recommended Requirements.
 
 : VT Enabled PC : Intel ix or Amd QuadCore
