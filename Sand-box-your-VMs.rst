@@ -41,7 +41,7 @@ For learning more follow these links:
 
 OpenStack:
   1.I am using **OpenStack Folsom Install Guide** by  **SkiBLE mseknibilel** as it is well written, easy and tested by 
-  Open Source geeks, with regular updates.
+  Open Source geeks, with regular updates. 
   You can find OpenStack Folsom Install Guide link `here <https://github.com/mseknibilel/OpenStack-Folsom-Install-guide>`_
   
   2.If you want to blow your brains out then you can refer the OpenStack Official Website which contains all the related 
@@ -73,22 +73,22 @@ Status: Beta
 1. Requirements
 ====================
 * Recommended Requirements 
-:VT Enabled PC:Intel ix or Amd QuadCore
-:4GB Ram:DDR2/DDR3 
+    :VT Enabled PC:Intel ix or Amd QuadCore
+    :4GB Ram:DDR2/DDR3 
 
 * Minimum Requirements
-:Non-VT PC's : Intel Core 2 Duo or Amd Dual Core
-:2GB Ram:DDR2/DDR3
+    :Non-VT PC's : Intel Core 2 Duo or Amd Dual Core
+    :2GB Ram:DDR2/DDR3
 
 * If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
-::
-        $sudo apt-get install cpu-checker
-        $sudo kvm-ok
+    ::
+          $sudo apt-get install cpu-checker
+          $sudo kvm-ok
 
 *  your pc does not support VT it will show 
-::
-        INFO: Your CPU does not support KVM extensions
-        KVM acceleration can NOT be used
+    ::
+          INFO: Your CPU does not support KVM extensions
+          KVM acceleration can NOT be used
         
 * Don't worry you will still be able to use Virtual Box but it will be very slow, so I must consider putting the requirements to be Patience or VT enabled processor ;).
 
@@ -99,18 +99,16 @@ There are two different types of configurations that are possible for setting up
 
 **1. Bridged Connections :** 
 ------------
-* Bridged Connection connects your VM as if its a physical machine. This means that your machine will be able to use
-internet and can be traced from other machines from internet. So if your network has a physical switch or you can
-spare a few IP addresses then I would suggest bridged connection
-                            
+* Bridged Connection connects your VM as if its a physical machine. This means that your machine will be able to use internet and can be traced from other machines from internet. So if your network has a physical switch or you can spare a few IP addresses then I would suggest bridged connection.
+
 * Advantage of bridged connections is that your networks remain the same and you are free of the hassels of creating
 virtual networks.
 
 
-:Node Role: NICs
-:Control Node: eth0 (100.10.10.51), eth1 (192.168.100.51)
-:Network Node: eth0 (100.10.10.52), eth1 (100.20.20.52), eth2 (192.168.100.52)
-:Compute Node: eth0 (100.10.10.53), eth1 (100.20.20.53)
+    :Node Role: NICs
+    :Control Node: eth0 (100.10.10.51), eth1 (192.168.100.51)
+    :Network Node: eth0 (100.10.10.52), eth1 (100.20.20.52), eth2 (192.168.100.52)
+    :Compute Node: eth0 (100.10.10.53), eth1 (100.20.20.53)
 
 
 
@@ -120,8 +118,7 @@ virtual networks.
 
 **2. Host Only Connections:** 
 ------------
-* Host only connections provide an internet network between your host and the Virtual Machine instances
-up and running on your host machine. This network is not traceable by other networks.
+* Host only connections provide an internet network between your host and the Virtual Machine instances up and running on your host machine. This network is not traceable by other networks.
 
 * The following are the host only connections that you will be setting up later on :
 
@@ -135,8 +132,7 @@ up and running on your host machine. This network is not traceable by other netw
 2. Setup Your VM Environment
 ==============
 
-* Well a few of these sections will be full of screenshots because it is essential for people to understand some of the networking
-related configurations so please bear with me since its quite necessary to put it up.
+* Well a few of these sections will be full of screenshots because it is essential for people to understand some of the networking related configurations so please bear with me since its quite necessary to put it up.
 
 * Before you can start configuring your Environment you need to download some of the following stuff:
 
@@ -158,9 +154,7 @@ related configurations so please bear with me since its quite necessary to put i
 
 **Note:** Even Though Im using Ubuntu as Host, the same is applicable to Windows, Mac and other Linux Hosts. 
 
-* If you have i5 or i7 2nd gen processor you can have VT technology inside VM's provided by VmWare. This means that your OpenStack
-nodes(Which are in turn VM's) will give positive result on KVM-OK. (I call it - Nesting of type-2 Hypervisors).
-Rest of the configurations remain same except for the UI and few other trivial differences.
+* If you have i5 or i7 2nd gen processor you can have VT technology inside VM's provided by VmWare. This means that your OpenStack nodes(Which are in turn VM's) will give positive result on KVM-OK. (I call it - Nesting of type-2 Hypervisors). Rest of the configurations remain same except for the UI and few other trivial differences.
 
 3. Configure Virtual Networks 
 ==============
@@ -275,52 +269,47 @@ Rest of the configurations remain same except for the UI and few other trivial d
 
 4. Install SSH and FTP
 ==============
-* I feel that there is a need to install SSH and FTP so that you could use your remote shell to login into the machine and use
-your terminal which is more convenient that using the Virtual Machines tty through the Virtual Box's  UI. You get a few added
-comforts like copy - paste commands into the remote terminal which is not possible directly on VM.
+
+* I feel that there is a need to install SSH and FTP so that you could use your remote shell to login into the machine and use your terminal which is more convenient that using the Virtual Machines tty through the Virtual Box's  UI. You get a few added comforts like copy - paste commands into the remote terminal which is not possible directly on VM.
 
 * FTP is for transferring files to and fro ... you can also use SFTP or install FTPD on both HOST and VM's.
 
-* Installation of SSH and FTP with its configuration is out of scope of this GUIDE and I may put it up but it depends upon my free time.
-If someone wants to contribute to this - please do so. 
+* Installation of SSH and FTP with its configuration is out of scope of this GUIDE and I may put it up but it depends upon my free time. If someone wants to contribute to this - please do so. 
 
-**Note:** Please set up the Networks from inside the VM before trying to SSH and FTP into the machines. I would suggest setting
-it up at once just after the installation of the Server on VM's is over.
+**Note:** Please set up the Networks from inside the VM before trying to SSH and FTP into the machines. I would suggest setting it up at once just after the installation of the Server on VM's is over.
 
 
 5. Install Your VM's Instances
 ==============
-* During Installation of The Operating Systems you will be asked for Custom Software to Install , if you are confused or not sure about this, 
-just skip this step by pressing **Enter Key** without selecting any of the given Options. 
+
+* During Installation of The Operating Systems you will be asked for Custom Software to Install , if you are confused or not sure about this, just skip this step by pressing **Enter Key** without selecting any of the given Options.
 
 **Warning -** Please do not install any of the other packages except for which are mentioned below unless you know what you are doing. I have experienced unwanted errors, package conflicts ... due to the same.
 
-1. Control Node: Install **SSH server** when asked for **Custom Software to Install**. Rest of the packages are not required and may
-   come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
+1. Control Node: Install **SSH server** when asked for **Custom Software to Install**. Rest of the packages are not required and may come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
 
-2. Quantum/Network Node: Install **SSH server** when asked for **Custom Software to Install**. Rest of the packages are not required and may
-   come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
+2. Quantum/Network Node: Install **SSH server** when asked for **Custom Software to Install**. Rest of the packages are not required and may come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
 
-3. Control Node: Install **SSH server** and **Virtual Machines Host** when asked for **Custom Software to Install**. Rest of the packages are not required and may
-   come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
+3. Control Node: Install **SSH server** and **Virtual Machines Host** when asked for **Custom Software to Install**. Rest of the packages are not required and may come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
+
 
 6. Its about to get sticky
 ==============
 
 * Well there are a few warnings that I must give you out of experience due to stupid habits that normal Users like me have -
-1. Never Shutdown your Virtual Machine - just save its state Virtual Box and VmWare both provide it.
-      In past this has broken NOVA packages , NOVA database, other errors have risen. I had to go restart each and every NOVA service on Control and Compute node. Believe me sometimes they can be pain in ass as they refuse to start up on reboot.
-      Once you configure up the messy part of Quantum Floating Ip's etc., honestly you dont want to re do it cause the settings get lost on reboot/shutdown.
-      Linux Servers are meant to be running 24x7 ... so no need for restarts until required. 
-2. If you are using bridged connection over a different physical router and have a seperate Internet connection/network ... then you can put up additional network interface NAT connections on your VM's for giving them Internet Access.
-3. VmWare NAT connection has minimal functionality issues. Virtual Box NAT connection is a bad boy - will disconnect or not work properly many times. So if your VM's are not getting internet connection do not panic ... follow these steps
-::
-    // Use ping command to see whether internet is on.
-    $ping google.com
-    // If its not connected restart networking service-
-    $sudo service networking restart
-    // Now Ping again
-    $ping google.com
+    1. Never Shutdown your Virtual Machine - just save its state Virtual Box and VmWare both provide it.
+       In past this has broken NOVA packages , NOVA database, other errors have risen. I had to go restart each and every NOVA service on Control and Compute node. Believe me sometimes they can be pain in ass as they refuse to start up on reboot.
+       Once you configure up the messy part of Quantum Floating Ip's etc., honestly you dont want to re do it cause the settings get lost on reboot/shutdown.
+       Linux Servers are meant to be running 24x7 ... so no need for restarts until required. 
+    2. If you are using bridged connection over a different physical router and have a seperate Internet connection/network ... then you can put up additional network interface NAT connections on your VM's for giving them Internet Access.
+    3. VmWare NAT connection has minimal functionality issues. Virtual Box NAT connection is a bad boy - will disconnect or not work properly many times. So if your VM's are not getting internet connection do not panic ... follow these steps
+    ::
+        // Use ping command to see whether internet is on.
+        $ping google.com
+        // If its not connected restart networking service-
+        $sudo service networking restart
+        // Now Ping again
+        $ping google.com
 
 * This should reconnect your network about 99% of the times. If you are really unlucky you must be having some other problems or your internet connection itself is not functioning... well try to avoid immature decisions. Believe me you dont want to mess up your existing setup.
 
@@ -574,6 +563,7 @@ This work has been supported by:
 
 This work has been based on:
 
+* Bilel Msekni's Folsom install gudie [https://github.com/mseknibilel/OpenStack-Folsom-Install-guide/blob/master/OpenStack_Folsom_Install_Guide_WebVersion.rst]
 * Emilien Macchi's Folsom guide [https://github.com/EmilienM/openstack-folsom-guide]
 * OpenStack Documentation [http://docs.openstack.org/trunk/openstack-compute/install/apt/content/]
 * OpenStack Quantum Install [http://docs.openstack.org/trunk/openstack-network/admin/content/ch_install.html]
