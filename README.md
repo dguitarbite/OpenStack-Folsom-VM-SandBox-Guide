@@ -6,7 +6,7 @@ OpenStack-Folsom-VM-SandBox-Guide
  A short Decription - :
  
  * ![VMware] (http://www.vmware.com/) is one of the virtualization softwares which will provide a simple UI for the same. Its closed source and you will have to buy it. It is a bit more user-friendly than Virtual Box but it comes with a cost. 
- 
+  
  * ![Virtual Box] (https://www.virtualbox.org/) is OpenSource virtualization software which is a bit noob-proof and agrees more with Geeks. But it supports more options and provides an API for managing, controlling Virtual Machines and other related settings.
   
  
