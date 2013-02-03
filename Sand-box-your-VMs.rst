@@ -74,12 +74,12 @@ Status: Beta
 =============
 
 * Recommended Requirements.
-:VT Enabled PC :Intel ix or Amd QuadCore
-:4GB Ram :DDR2/DDR3
+  :VT Enabled PC :Intel ix or Amd QuadCore
+  :4GB Ram :DDR2/DDR3
 
 * Minimum Requirements.
-:Non-VT PC's :Intel Core 2 Duo or Amd Dual Core
-:2GB Ram :DDR2/DDR3
+  :Non-VT PC's :Intel Core 2 Duo or Amd Dual Core
+  :2GB Ram :DDR2/DDR3
 
 * If you dont know wether your processor is VT enabled, you could check it by installing **cpu checker**
   ::
