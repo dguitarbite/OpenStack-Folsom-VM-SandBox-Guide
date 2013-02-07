@@ -16,4 +16,4 @@ You are at - How to Install OpenStack Folsom in Virtual Box
 
    * [OpenStack-Folsom-Install-Guide](https://github.com/mseknibilel/OpenStack-Folsom-Install-guide/blob/master/OpenStack_Folsom_Install_Guide_WebVersion.rst) by Bilel Msekni
   
-**Note :** If you are looking forward to learn Virtualization or OpenStack this is not a good place for you to start with. Why dont you [Google It](https://www.google.com) !!!
+**Note :** If you are looking forward to learn Virtualization or OpenStack this is not a good place for you to start with.
