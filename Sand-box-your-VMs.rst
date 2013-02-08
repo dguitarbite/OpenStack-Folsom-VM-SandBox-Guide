@@ -223,15 +223,15 @@ There are two different types of configurations that are possible for setting up
       Your VM's should have the following configuration. NIC-Name and Ipaddress are allocated after installation of the Operating System.
 
  
-      +-------+--------------------------+-----------+------------------+
+      +-----------------------------+--------------------------+-----------+------------------+
       | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
-      +=======+==========================+===========+==================+
-      |  Adapter 1    | Host Only/vboxnet0       | eth0      | 100.10.10.51     |  
-      +-------+--------------------------+-----------+------------------+
-      |  Adapter 2    | Host Only/vboxnet1       | eth1      | 192.168.100.51   |
-      +-------+--------------------------+-----------+------------------+
-      |  Adapter 3    | NAT                      | eth2      | DHCP(auto-assign)|
-      +-------+--------------------------+-----------+------------------+
+      +=============================+==========================+===========+==================+
+      |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.51     |  
+      +-----------------------------+--------------------------+-----------+------------------+
+      |  Adapter 2                  | Host Only/vboxnet1       | eth1      | 192.168.100.51   |
+      +-----------------------------+--------------------------+-----------+------------------+
+      |  Adapter 3                  | NAT                      | eth2      | DHCP(auto-assign)|
+      +-----------------------------+--------------------------+-----------+------------------+
 
       Create a new Virtual Machine ... select the appropriate options
       
@@ -247,13 +247,13 @@ There are two different types of configurations that are possible for setting up
       Set up two NIC cards as bridged connections and the settings as shown by the diagram...
         
  
-      +-------+--------------------------+-----------+------------------+
+      +-----------------------------+--------------------------+-----------+------------------+
       | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
-      +=======+==========================+===========+==================+
-      |  Adapter 1    | Bridged Adapter          | eth0      | 100.10.10.51     |  
-      +-------+--------------------------+-----------+------------------+
-      |  Adapter 2    | Bridged Adapter          | eth1      | 198.168.100.51   |
-      +-------+--------------------------+-----------+------------------+
+      +=============================+==========================+===========+==================+
+      |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.51     |  
+      +-----------------------------+--------------------------+-----------+------------------+
+      |  Adapter 2                  | Bridged Adapter          | eth1      | 198.168.100.51   |
+      +-----------------------------+--------------------------+-----------+------------------+
       
         .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/7-%20Bridge%20Connection.png
       
@@ -279,17 +279,17 @@ There are two different types of configurations that are possible for setting up
         **For Host-Only Connections** Create four NIC's 
 
            
-          +-------+--------------------------+-----------+------------------+
+          +-----------------------------+--------------------------+-----------+------------------+
           | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
-          +=======+==========================+===========+==================+
-          |  Adapter 1    | Host Only/vboxnet0       | eth0      | 100.10.10.52     |  
-          +-------+--------------------------+-----------+------------------+
-          |  Adapter 2    | Host Only/vboxnet1       | eth1      | 102.20.20.52     |
-          +-------+--------------------------+-----------+------------------+
-          |  Adapter 3    | Host Only/vboxnet2       | eth2      | 198.168.100.52   |
-          +-------+--------------------------+-----------+------------------+
-          |  Adapter 4    | NAT                      | eth3      | DHCP(auto-assign)|
-          +-------+--------------------------+-----------+------------------+
+          +=============================+==========================+===========+==================+
+          |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.52     |  
+          +-----------------------------+--------------------------+-----------+------------------+
+          |  Adapter 2                  | Host Only/vboxnet1       | eth1      | 102.20.20.52     |
+          +-----------------------------+--------------------------+-----------+------------------+
+          |  Adapter 3                  | Host Only/vboxnet2       | eth2      | 198.168.100.52   |
+          +-----------------------------+--------------------------+-----------+------------------+
+          |  Adapter 4                  | NAT                      | eth3      | DHCP(auto-assign)|
+          +-----------------------------+--------------------------+-----------+------------------+
   
           1. eth0 - OpenStack Management Network - 100.10.10.52 (IP addresses are allocated after Installation of OS).
           2. eth1 - OpenStack VM Conf. Network - 100.20.20.52 (IP addresses are allocated after Insallation of OS).
@@ -300,15 +300,15 @@ There are two different types of configurations that are possible for setting up
         **For bridged connections** Create three NIC's connect them to bridge network as done above.
 
  
-           +-------+--------------------------+-----------+------------------+
+           +-----------------------------+--------------------------+-----------+------------------+
            | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
-           +=======+==========================+===========+==================+
-           |  Adapter 1    | Bridged Adapter          | eth0      | 100.10.10.52     |  
-           +-------+--------------------------+-----------+------------------+
-           |  Adapter 2    | Bridged Adapter          | eth1      | 100.20.20.52     |
-           +-------+--------------------------+-----------+------------------+
-           |  Adapter 3    | Bridged Adapter          | eth2      | 198.168.100.52   |
-           +-------+--------------------------+-----------+------------------+
+           +=============================+==========================+===========+==================+
+           |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.52     |  
+           +-----------------------------+--------------------------+-----------+------------------+
+           |  Adapter 2                  | Bridged Adapter          | eth1      | 100.20.20.52     |
+           +-----------------------------+--------------------------+-----------+------------------+
+           |  Adapter 3                  | Bridged Adapter          | eth2      | 198.168.100.52   |
+           +-----------------------------+--------------------------+-----------+------------------+
           
           1. eth0 - OpenStack Management Network - 100.10.10.52 (IP addresses are allocated after Installation of OS).
           2. eth1 - OpenStack VM Conf. Network - 100.20.20.52 (IP addresses are allocated after Installation of OS).
@@ -326,15 +326,15 @@ There are two different types of configurations that are possible for setting up
   
         **For Host-Only Connections** Create four NIC's 
 
-          +-------+--------------------------+-----------+------------------+
+          +-----------------------------+--------------------------+-----------+------------------+
           | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
-          +=======+==========================+===========+==================+
-          |  Adapter 1    | Host Only/vboxnet0       | eth0      | 100.10.10.53     |  
-          +-------+--------------------------+-----------+------------------+
-          |  Adapter 2    | Host Only/vboxnet1       | eth1      | 100.20.20.53     |
-          +-------+--------------------------+-----------+------------------+
-          |  Adapter 3    | NAT                      | eth3      | DHCP(auto-assign)|
-          +-------+--------------------------+-----------+------------------+
+          +=============================+==========================+===========+==================+
+          |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.53     |  
+          +-----------------------------+--------------------------+-----------+------------------+
+          |  Adapter 2                  | Host Only/vboxnet1       | eth1      | 100.20.20.53     |
+          +-----------------------------+--------------------------+-----------+------------------+
+          |  Adapter 3                  | NAT                      | eth3      | DHCP(auto-assign)|
+          +-----------------------------+--------------------------+-----------+------------------+
 
 
           1. eth0 - OpenStack Management Network - 100.10.10.53 (IP addresses are not allocated now)
@@ -344,13 +344,13 @@ There are two different types of configurations that are possible for setting up
 
         **For bridged connections** Create two NIC's connect them to bridge network as done above.
 
-           +-------+--------------------------+-----------+------------------+
+           +-----------------------------+--------------------------+-----------+------------------+
            | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
-           +=======+==========================+===========+==================+
-           |  Adapter 1    | Bridged Adapter          | eth0      | 100.10.10.53     |  
-           +-------+--------------------------+-----------+------------------+
-           |  Adapter 2    | Bridged Adapter          | eth1      | 100.20.20.53     |
-           +-------+--------------------------+-----------+------------------+
+           +=============================+==========================+===========+==================+
+           |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.53     |  
+           +-----------------------------+--------------------------+-----------+------------------+
+           |  Adapter 2                  | Bridged Adapter          | eth1      | 100.20.20.53     |
+           +-----------------------------+--------------------------+-----------+------------------+
           
            **Note:** Bridged Connection dosent a seperate NAT connection for internet.
 
