@@ -206,6 +206,10 @@ There are two different types of configurations that are possible for setting up
   * Select **DHCP Server** tab
         Unselect the **Enable Server** option.
 
+* Step 7:
+  * Open terminal on your host `Alt+Ctrl+T` and type **Ifconfig** you should get the following output
+    
+    .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/4-Check%20Network%20Adapters.png
 
 **2. Set up Network Interface Cards(NIC) on Virtual Machines** :
 ------------      
