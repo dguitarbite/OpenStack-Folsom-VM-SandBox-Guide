@@ -221,10 +221,10 @@ There are two different types of configurations that are possible for setting up
     For **Host-Only** Connections
       Your VM's should have the following configuration. NIC-Name and Ipaddress are allocated after installation of the Operating System.
 
-      :Sr.No:Virtual Box Network Name:Nic-Name:Ipaddres
-      :1:Vboxnet0:eth0:100.10.10.1
-      :2:Vboxnet2:eth1:192.168.100.1
-      :3:NAT:eth2:DHCP(Auto Assign)
+      :Sr.No: Virtual Box Network Name:Nic-Name: Ipaddres
+      :1: Vboxnet0:eth0: 100.10.10.1
+      :2: Vboxnet2:eth1: 192.168.100.1
+      :3: NAT: eth2: DHCP(Auto Assign)
 
       Create a new Virtual Machine ... select the appropriate options
       
@@ -239,9 +239,9 @@ There are two different types of configurations that are possible for setting up
     
       Set up two NIC cards as bridged connections and the settings as shown by the diagram...
         
-        :Sr.No:Virtual Box Network Name:Nic-Name:Ipaddres
-        :1:Bridged Adapter:eth0:100.10.10.1
-        :2:Bridged Adapter:eth1:192.168.100.1
+        :Sr.No: Virtual Box Network Name: Nic-Name:Ipaddres
+        :1: Bridged Adapter: eth0:100.10.10.1
+        :2: Bridged Adapter: eth1:192.168.100.1
       
       
         .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/7-%20Bridge%20Connection.png
