@@ -221,22 +221,16 @@ There are two different types of configurations that are possible for setting up
     For **Host-Only** Connections
       Your VM's should have the following configuration. NIC-Name and Ipaddress are allocated after installation of the Operating System.
 
-      :Sr.No: Virtual Box Network Name: Nic-Name: Ipaddres
-      :1: Vboxnet0: eth0: 100.10.10.1
-      :2: Vboxnet2: eth1: 192.168.100.1
-      :3: NAT: eth2: DHCP(Auto Assign)
-
-+------------+------------+-----------+
-| Header 1   | Header 2   | Header 3  |
-+============+============+===========+
-| body row 1 | column 2   | column 3  |
-+------------+------------+-----------+
-| body row 2 | Cells may span columns.|
-+------------+------------+-----------+
-| body row 3 | Cells may  | - Cells   |
-+------------+ span rows. | - contain |
-| body row 4 |            | - blocks. |
-+------------+------------+-----------+  
+ 
+      +-------+--------------------------+-----------+------------------+
+      | Sr.No | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+      +=======+==========================+===========+==================+
+      |  1    | Host Only/vboxnet0       | eth0      | 100.10.10.51     |  
+      +-------+--------------------------+-----------+------------------+
+      |  2    | Host Only/vboxnet1       | eth1      | 192.168.100.51   |
+      +-------+--------------------------+-----------+------------------+
+      |  3    | NAT                      | eth2      | DHCP(auto-assign)|
+      +-------+--------------------------+-----------+------------------+
 
       Create a new Virtual Machine ... select the appropriate options
       
@@ -251,10 +245,14 @@ There are two different types of configurations that are possible for setting up
     
       Set up two NIC cards as bridged connections and the settings as shown by the diagram...
         
-        :Sr.No: Virtual Box Network Name: Nic-Name:Ipaddres
-        :1: Bridged Adapter: eth0:100.10.10.1
-        :2: Bridged Adapter: eth1:192.168.100.1
-      
+ 
+      +-------+--------------------------+-----------+------------------+
+      | Sr.No | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+      +=======+==========================+===========+==================+
+      |  1    | Bridged Adapter          | eth0      | 100.10.10.51     |  
+      +-------+--------------------------+-----------+------------------+
+      |  2    | Bridged Adapter          | eth1      | 198.168.100.51   |
+      +-------+--------------------------+-----------+------------------+
       
         .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/7-%20Bridge%20Connection.png
       
@@ -277,26 +275,75 @@ There are two different types of configurations that are possible for setting up
     Network Node
       Create a new Virtual Machine ... configure it similar to the Control Node except for the networking part.
       
+        **For Host-Only Connections** Create four NIC's 
+
+           
+          +-------+--------------------------+-----------+------------------+
+          | Sr.No | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+          +=======+==========================+===========+==================+
+          |  1    | Host Only/vboxnet0       | eth0      | 100.10.10.52     |  
+          +-------+--------------------------+-----------+------------------+
+          |  2    | Host Only/vboxnet1       | eth1      | 192.20.20.52     |
+          +-------+--------------------------+-----------+------------------+
+          |  3    | Host Only/vboxnet2       | eth2      | 198.168.100.52   |
+          +-------+--------------------------+-----------+------------------+
+          |  4    | NAT                      | eth3      | DHCP(auto-assign)|
+          +-------+--------------------------+-----------+------------------+
+  
+          1. eth0 - OpenStack Management Network - 100.10.10.52 (IP addresses are allocated after Installation of OS).
+          2. eth1 - OpenStack VM Conf. Network - 100.20.20.52 (IP addresses are allocated after Insallation of OS).
+          3. eth2 - Expose OpenStack to external networks - 192.168.100.52 (IP addresses are allocated after installation OS).
+          4. eth3 - NAT - for internet connection.(DHCP - auto allocate IP address while installing OS).
+
+
         **For bridged connections** Create three NIC's connect them to bridge network as done above.
 
-        **For Host-Only Connections** Create four NIC's 
-          1. eth0 - OpenStack Management Network - 100.10.10.52 (IP addresses are not allocated now)
-          2. eth1 - OpenStack VM Conf. Network - 100.20.20.52 (IP addresses are not allocated now)
-          3. eth2 - Expose OpenStack to external networks - 192.168.100.52 (IP addresses are not allocated now)
-          4. eth3 - NAT - for internet connection.
+ 
+           +-------+--------------------------+-----------+------------------+
+           | Sr.No | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+           +=======+==========================+===========+==================+
+           |  1    | Bridged Adapter          | eth0      | 100.10.10.52     |  
+           +-------+--------------------------+-----------+------------------+
+           |  2    | Bridged Adapter          | eth1      | 100.20.20.52     |
+           +-------+--------------------------+-----------+------------------+
+           |  3    | Bridged Adapter          | eth2      | 198.168.100.52   |
+           +-------+--------------------------+-----------+------------------+
+          
+          1. eth0 - OpenStack Management Network - 100.10.10.52 (IP addresses are allocated after Installation of OS).
+          2. eth1 - OpenStack VM Conf. Network - 100.20.20.52 (IP addresses are allocated after Installation of OS).
+          3. eth2 - Expose OpenStack to external networks - 192.168.100.52 (IP addresses are allocated after Installation of OS).
+          
+          **Note:** Bridged Connection dosent a seperate NAT connection for internet.
+          
+
 * Step 3:
     Compute Node:
       Create a new Virtual Machine ... configure it as follows:
+
         If possible give it about **1gb - 4 gb of ram** depending how much extra RAM you have
         Give as many Processor Cores you can spare with **100% processor Execution Capacity**
-
-        **For bridged connections** Create two NIC's connect them to bridge network as done above.
-
+  
         **For Host-Only Connections** Create four NIC's 
+        
+
           1. eth0 - OpenStack Management Network - 100.10.10.53 (IP addresses are not allocated now)
           2. eth1 - OpenStack VM Conf. Network - 100.20.20.53 (IP addresses are not allocated now)
           3. eth2 - NAT - for internet connection.
 
+
+        **For bridged connections** Create two NIC's connect them to bridge network as done above.
+
+           +-------+--------------------------+-----------+------------------+
+           | Sr.No | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+           +=======+==========================+===========+==================+
+           |  1    | Bridged Adapter          | eth0      | 100.10.10.53     |  
+           +-------+--------------------------+-----------+------------------+
+           |  2    | Bridged Adapter          | eth1      | 100.20.20.53     |
+           +-------+--------------------------+-----------+------------------+
+          
+           **Note:** Bridged Connection dosent a seperate NAT connection for internet.
+
+        
 
 **Note:** For Host Only Connections - Please do remember to select the NIC card which has the internet access NAT - which is
 ::
