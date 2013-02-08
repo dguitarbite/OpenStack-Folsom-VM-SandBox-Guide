@@ -283,7 +283,7 @@ There are two different types of configurations that are possible for setting up
           +=======+==========================+===========+==================+
           |  1    | Host Only/vboxnet0       | eth0      | 100.10.10.52     |  
           +-------+--------------------------+-----------+------------------+
-          |  2    | Host Only/vboxnet1       | eth1      | 192.20.20.52     |
+          |  2    | Host Only/vboxnet1       | eth1      | 102.20.20.52     |
           +-------+--------------------------+-----------+------------------+
           |  3    | Host Only/vboxnet2       | eth2      | 198.168.100.52   |
           +-------+--------------------------+-----------+------------------+
@@ -324,7 +324,17 @@ There are two different types of configurations that are possible for setting up
         Give as many Processor Cores you can spare with **100% processor Execution Capacity**
   
         **For Host-Only Connections** Create four NIC's 
-        
+
+          +-------+--------------------------+-----------+------------------+
+          | Sr.No | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+          +=======+==========================+===========+==================+
+          |  1    | Host Only/vboxnet0       | eth0      | 100.10.10.53     |  
+          +-------+--------------------------+-----------+------------------+
+          |  2    | Host Only/vboxnet1       | eth1      | 100.20.20.53     |
+          +-------+--------------------------+-----------+------------------+
+          |  3    | NAT                      | eth3      | DHCP(auto-assign)|
+          +-------+--------------------------+-----------+------------------+
+
 
           1. eth0 - OpenStack Management Network - 100.10.10.53 (IP addresses are not allocated now)
           2. eth1 - OpenStack VM Conf. Network - 100.20.20.53 (IP addresses are not allocated now)
