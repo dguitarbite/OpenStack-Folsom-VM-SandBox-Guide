@@ -2,7 +2,7 @@
   OpenStack Folsom VM SandBox and Install Guide
 ==========================================================
 
-:Version: 0.4
+:Version: 0.0
 :Source: https://github.com/mseknibilel/OpenStack-Folsom-Install-guide
 :Keywords: Multi node OpenStack, Folsom, Quantum, Nova, Keystone, Glance, Horizon, Cinder, OpenVSwitch, KVM, Ubuntu Server 12.10 (64 bits), Ubuntu Server 12.04, Virtual Box, Sand-Boxing, VmWare, Virtual Networks, QEmu, Kvm.
 
@@ -69,9 +69,9 @@ Linux:
   1.You will need some basic knowledge of Linux` and Shell Programming otherwise you will go through tremendous torture of blindly following these Guides and if in case you end up with an error/dead lock, you will get stuck for silly reasons. There are many books, docs available and I don't know which one to recommend so please `Google <https://www.google.com/>`_ it.
 
 
-Version 0.4
+Version 0.0
 
-Status: Beta2
+Status: Alpha - to configure it for VMware.
 
 
 1. Requirements
