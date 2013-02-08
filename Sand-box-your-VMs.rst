@@ -207,31 +207,47 @@ There are two different types of configurations that are possible for setting up
         Unselect the **Enable Server** option.
 
 * Step 7:
-  * Open terminal on your host `Alt+Ctrl+T` and type **Ifconfig** you should get the following output
+  * Open terminal on your host `Alt+Ctrl+T` and type **Ifconfig** you should get something similar to the following output. The Networks are Highlited.
     
     .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/4-Check%20Network%20Adapters.png
+  
+  * If you are not-sure of what you are doing - Note the IP-Address on your host should match to the one in the above snap.
 
 **2. Set up Network Interface Cards(NIC) on Virtual Machines** :
 ------------      
   
 * Step 1:
     Control Node
+    For **Host-Only** Connections
+      Your VM's should have the following configuration. NIC-Name and Ipaddress are allocated after installation of the Operating System.
+
+      :Sr.No:Virtual Box Network Name:Nic-Name:Ipaddres
+      :1:Vboxnet0:eth0:100.10.10.1
+      :2:Vboxnet2:eth1:192.168.100.1
+      :3:NAT:eth2:DHCP(Auto Assign)
+
       Create a new Virtual Machine ... select the appropriate options
       
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/1-%20Basic%20Info.png
     
-    Ram Required for this node is 512 MB (minimum recommended for Ubuntu Server 12.XX), if you have more ram feel free to allocate itbut remember that your Compute Node needs
-    the highest amount of RAM and Processor so I usually save up for the compute node...reduce the processor allocation pool
+      Ram Required for this node is 512 MB (minimum recommended for Ubuntu Server 12.XX), if you have more ram feel free to allocate itbut remember that your Compute Node needs
+      the highest amount of RAM and Processor so I usually save up for the compute node...reduce the processor allocation pool
       
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/2-%20Resource%20Allocation.png
     
-    For **Bridged Connections** set up two NIC cards as bridged connections and the settings as shown by the diagram...
-      eth0 - 100.10.10.51 (IP addresses are not allocated now)
-      eth1 - 192.168.100.51 (IP addresses are not allocated now)
+    For **Bridged Connections** 
+    
+      Set up two NIC cards as bridged connections and the settings as shown by the diagram...
+        
+        :Sr.No:Virtual Box Network Name:Nic-Name:Ipaddres
+        :1:Bridged Adapter:eth0:100.10.10.1
+        :2:Bridged Adapter:eth1:192.168.100.1
       
-      .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/7-%20Bridge%20Connection.png
       
-      Note: Internet is available to bridged connected VM's directly so no need to setup a seperate NIC for internet.
+        .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/7-%20Bridge%20Connection.png
+      
+        Note: Internet is available to bridged connected VM's directly so no need to setup a seperate NIC for internet.
+    
     For **Host Only Connections** set up three NIC cards as per the given diagram.
       eth0 - OpenStack Management Network - 100.10.10.51 (IP addresses are not allocated now)
       
