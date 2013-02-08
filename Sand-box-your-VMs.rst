@@ -188,9 +188,24 @@ There are two different types of configurations that are possible for setting up
      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/2-Give%20Static%20Ip%20to%20Host.png
     
   *  Select **DHCP Server** tab
-       Unselect the **Enable Server** option
+       Unselect the **Enable Server** option.
       
      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/3-%20Configure%20DHCP.png
+
+* Step 5:
+  * Select vboxnet1 and click on edit, select **Adapter Tab**
+      Set the IPv4 address as **100.20.20.1**
+        Leave the other options as it is.
+  * Select **DHCP Server** tab
+        Unselect the **Enable Server** option.
+
+* Step 6:
+  * Select vboxnet2 and click on edit, select **Adapter Tab**
+      Set the IPv4 address as **192.168.100.1**
+        Leave the other options as it is.
+  * Select **DHCP Server** tab
+        Unselect the **Enable Server** option.
+
 
 **2. Set up Network Interface Cards(NIC) on Virtual Machines** :
 ------------      
