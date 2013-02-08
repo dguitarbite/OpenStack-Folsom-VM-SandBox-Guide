@@ -211,7 +211,6 @@ There are two different types of configurations that are possible for setting up
     
     .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/1-Create%20Host%20only%20Network.png  
 
-    .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/4-Check%20Network%20Adapters.png
   
   * If you are not-sure of what you are doing - Note the IP-Address on your host should match to the one in the above snap.
 
