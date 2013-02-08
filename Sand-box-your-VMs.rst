@@ -71,7 +71,7 @@ Linux:
 
 Version 0.4
 
-Status: Stable
+Status: Beta2
 
 
 1. Requirements
