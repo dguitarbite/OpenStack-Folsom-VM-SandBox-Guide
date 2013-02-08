@@ -611,7 +611,7 @@ For the remaining Installation Follow `OpenStack-Folsom-Install-guide 4. Compute
 
 After Finishing With the Guide's Steps ... please do the following Changes.
 
-4.3 KVM
+9.3 KVM
 ------------------
 
 * your hardware does not support virtualization because it is a virtual machine itselves ::
@@ -630,22 +630,14 @@ After Finishing With the Guide's Steps ... please do the following Changes.
 
 **Note :** This is for SandBoxing purposes only. Ideal for learning and testing, checking out OpenStack. If you want proper working you must have physical machines working.
 
-10. Configure the internal networks
-==============
 
-
-
-11. Word Of Advice.
+10. Word Of Advice.
 ==============
 
 * On any condition do not restart - shutdown your VM's, just Save the machine state.
 
 
-
-
-
-
-12. Licensing
+11. Licensing
 ============
 
 OpenStack Folsom Install Guide by Bilel Msekni is licensed under a Creative Commons Attribution 3.0 Unported License.
@@ -653,21 +645,20 @@ OpenStack Folsom Install Guide by Bilel Msekni is licensed under a Creative Comm
 .. image:: http://i.imgur.com/4XWrp.png
 To view a copy of this license, visit [ http://creativecommons.org/licenses/by/3.0/deed.en_US ].
 
-13. Contacts
+12. Contacts
 ===========
 
 Pranav Salunke: pps.pranav@gmail.com
 Bilel Msekni: bilel.msekni@telecom-sudparis.eu
 
-14. Acknowledgment
+13. Acknowledgment
 =================
 
 This work has been supported by:
 
-* CompatibleOne Project (French FUI project) [http://compatibleone.org/]
-* Easi-Clouds (ITEA2 project) [http://easi-clouds.eu/]
+* 
 
-15. Credits
+14. Credits
 =================
 
 This work has been based on:
@@ -677,7 +668,7 @@ This work has been based on:
 * OpenStack Documentation [http://docs.openstack.org/trunk/openstack-compute/install/apt/content/]
 * OpenStack Quantum Install [http://docs.openstack.org/trunk/openstack-network/admin/content/ch_install.html]
 
-16. To do
+15. To do
 =======
 
 This guide is just a startup. Your suggestions are always welcomed.
