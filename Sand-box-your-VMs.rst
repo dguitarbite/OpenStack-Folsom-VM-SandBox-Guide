@@ -640,12 +640,13 @@ After Finishing With the Guide's Steps ... please do the following Changes.
 ==============
 
 * On any condition do not restart - shutdown your VM's, just Save the machine state.
+* Try not to modify virtual machines LAN card's mac address, it will requrie you to modify your network interfaces page.
 
 
 11. Licensing
 ============
 
-OpenStack Folsom Install Guide by Bilel Msekni is licensed under a Creative Commons Attribution 3.0 Unported License.
+OpenStack Folsom VM SandBox Guide by Pranav Salunke is licensed under a Creative Commons Attribution 3.0 Unported License.
 
 .. image:: http://i.imgur.com/4XWrp.png
 To view a copy of this license, visit [ http://creativecommons.org/licenses/by/3.0/deed.en_US ].
@@ -661,7 +662,8 @@ Bilel Msekni: bilel.msekni@telecom-sudparis.eu
 
 This work has been supported by:
 
-* 
+* Cloud Rack - Checkout Cloud Rack at -[https://github.com/organizations/cloud-rack]
+* Manoj-Gudi - A Hacker friend of mine !!! - check his repo at - [https://github.com/manojgudi]
 
 14. Credits
 =================
