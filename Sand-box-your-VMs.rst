@@ -662,7 +662,7 @@ Bilel Msekni: bilel.msekni@telecom-sudparis.eu
 
 This work has been supported by:
 
-* Cloud Rack - Checkout Cloud Rack at -[https://github.com/organizations/cloud-rack]
+* Cloud Rack - Checkout Cloud Rack at -[https://github.com/cloud-rack]
 * Manoj-Gudi - A Hacker friend of mine !!! - check his repo at - [https://github.com/manojgudi]
 
 14. Credits
