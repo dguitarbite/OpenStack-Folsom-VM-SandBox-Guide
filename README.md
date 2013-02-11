@@ -1,7 +1,7 @@
 OpenStack-Folsom-VM-SandBox-Guide
 =================================
 
- To get started with VMware click [here] (https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/tree/VMware)
+ To get started with VMware click [here] (https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/blob/VMware/Sand-box-your-VMs.rst)
  
  
 * If you want to use `VMware` for `OpenStack Sandboxing`, can check out the following link(work in progress-not recommended for begineers):
