@@ -15,7 +15,7 @@ OpenStack-Folsom-VM-SandBox-Guide
 
 
 * For those who want to use `Virtual Box` for `OpenStack Sandboxing`, can check out the following link(v0.4 - Ready to be Used. Happy Stacking):
-  * [OpenStack-Folsom-VM-SandBoxing-Guide with Virtual Box](https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/tree/VirtualBox)
+  * [OpenStack-Folsom-VM-SandBoxing-Guide with Virtual Box](https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/blob/master/VirtualBox.rst)
 
 
 * For Advanced Users who know all about virtualziation - or do not want to use Virtual Machines for OpenStack deployment should check out:
