@@ -2,7 +2,7 @@
   OpenStack Folsom VM SandBox and Install Guide
 ==========================================================
 
-:Version: 0.0
+:Version: 0.1
 :Source: https://github.com/mseknibilel/OpenStack-Folsom-Install-guide
 :Keywords: Multi node OpenStack, Folsom, Quantum, Nova, Keystone, Glance, Horizon, Cinder, OpenVSwitch, KVM, Ubuntu Server 12.10 (64 bits), Ubuntu Server 12.04, Virtual Box, Sand-Boxing, VmWare, Virtual Networks, QEmu, Kvm.
 
@@ -60,18 +60,19 @@ Networking:
   **Note :** This is required as further in the guide these Concepts will be handy and you need to know what kind of networks you are setting up as there will be nesting of networks , meaning Virtual Networks inside Virtual Networks.
 
 Virtualization:
-  1.To Learn Virtualization, go through the Virtual Box Guide `here <http://www.virtualbox.org/manual/UserManual.html>`_, this should be sufficient to provide a fair idea on Virtualization relateed concepts.
+  1.To Learn Virtualization, go through the VMware Guide `here <http://www.vmware.com/support/product-support/workstation.html>`_, this should be sufficient to provide a fair idea on Virtualization relateed concepts.
   
-  2.Virtual Box provides User Interface and API for using it, although API will provide more flexibility, UI will have lesser learning curve, its up to you. I will try to provide both if time permits but I have to remind my-selves that this guide is meant for OpenStack sand-boxing :).
-  You can access the API's for advanced networking `here <https://www.virtualbox.org/wiki/Advanced_Networking_Linux>`_.
+  2.VMware provides a powerful User Interface with its standard Workstation Edition.
+
+**Note :** VMware on Macintosh Machines is called as VMware Fusion and on Linux & Windows Platforms it is called as VMware Workstation/Player. I would suggest Workstation for this setup, as it provides some extra features that may not be present in VMware Player.
 
 Linux:
-  1.You will need some basic knowledge of Linux` and Shell Programming otherwise you will go through tremendous torture of blindly following these Guides and if in case you end up with an error/dead lock, you will get stuck for silly reasons. There are many books, docs available and I don't know which one to recommend so please `Google <https://www.google.com/>`_ it.
+  1.You will need some basic knowledge of Linux and Shell Programming otherwise you will go through tremendous torture of blindly following these Guides and if in case you end up with an error/dead lock, you will get stuck for silly reasons. There are many books, docs available and I don't know which one to recommend so please `Google <https://www.google.com/>`_ it.
 
 
-Version 0.0
+Version 0.1
 
-Status: Alpha - to configure it for VMware.
+Status: Beta - to configure it for VMware.
 
 
 1. Requirements
@@ -144,7 +145,7 @@ There are two different types of configurations that are possible for setting up
 
 * Before you can start configuring your Environment you need to download some of the following stuff:
 
-  1. `Oracle Virtual Box <https://www.virtualbox.org/wiki/Downloads>`_
+  1. `VMware <hhttp://www.vmware.com/support/product-support/workstation.html>`_
         Note: You cannot set up a amd64 VM on a x86 machine. 
         
   2. `Ubuntu 12.04 Server or Ubuntu 12.10 Server <http://www.ubuntu.com/download/server>`_
@@ -212,7 +213,7 @@ There are two different types of configurations that are possible for setting up
     .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/1.Virtual%20Network/Externetwork.png
 
 
-* Step 7:
+* Step 6:
   * Open terminal on your host `Alt+Ctrl+T` and type **Ifconfig** you should be able to see vmnet5,vmnet6,vmnet7 along with other networks.
   
 
@@ -228,21 +229,18 @@ There are two different types of configurations that are possible for setting up
       +-----------------------------+--------------------------+-----------+------------------+
       | VMware Network Adapter      | VMware Network Name      | NIC-Name  | Ipaddress        |
       +=============================+==========================+===========+==================+
-      |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.51     |  
+      |  Adapter 1                  | Host Only/vmnet5         | eth0      | 100.10.10.51     |  
       +-----------------------------+--------------------------+-----------+------------------+
-      |  Adapter 2                  | Host Only/vboxnet1       | eth1      | 192.168.100.51   |
+      |  Adapter 2                  | Host Only/vmnet7         | eth1      | 192.168.100.51   |
       +-----------------------------+--------------------------+-----------+------------------+
       |  Adapter 3                  | NAT                      | eth2      | DHCP(auto-assign)|
       +-----------------------------+--------------------------+-----------+------------------+
 
       Create a new Virtual Machine ... select the appropriate options
-      
-      .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/1-%20Basic%20Info.png
     
       Ram Required for this node is 512 MB (minimum recommended for Ubuntu Server 12.XX), if you have more ram feel free to allocate itbut remember that your Compute Node needs
       the highest amount of RAM and Processor so I usually save up for the compute node...reduce the processor allocation pool
       
-      .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/2-%20Resource%20Allocation.png
     
     For **Bridged Connections** 
     
@@ -257,22 +255,21 @@ There are two different types of configurations that are possible for setting up
       |  Adapter 2                  | Bridged Adapter          | eth1      | 198.168.100.51   |
       +-----------------------------+--------------------------+-----------+------------------+
       
-        .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/7-%20Bridge%20Connection.png
       
         Note: Internet is available to bridged connected VM's directly so no need to setup a seperate NIC for internet.
     
     For **Host Only Connections** set up three NIC cards as per the given diagram.
       eth0 - OpenStack Management Network - 100.10.10.51 (IP addresses are not allocated now)
       
-      .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/3-%20control-nw1.png
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Control%20Node/Control-nw1.png
       
       eth1 - Expose OpenStack API - 192.168.100.51 (IP addresses are not allocated now)
       
-      .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/4%20-%20control-nw2.png
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Control%20Node/Control-NW2.png
       
-      eth2 - Virtual Box NAT (Network Address Translation) - for internet Connection. (IP addresses are not allocated now)
+      eth2 - VMware NAT (Network Address Translation) - for internet Connection. (IP addresses are not allocated now)
       
-      .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/5%20-control-nw3.png
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Control%20Node/Control%20NW-NAT.png
 
 * Step 2:
     Network Node
@@ -294,9 +291,20 @@ There are two different types of configurations that are possible for setting up
           +-----------------------------+--------------------------+-----------+------------------+
   
           1. eth0 - OpenStack Management Network - 100.10.10.52 (IP addresses are allocated after Installation of OS).
+              
+            .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Network%20Node/1.Network%20Node%20NW1.png
+        
           2. eth1 - OpenStack VM Conf. Network - 100.20.20.52 (IP addresses are allocated after Insallation of OS).
+        
+            .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Network%20Node/2.Network%20Node%20NW2.png
+  
           3. eth2 - Expose OpenStack to external networks - 192.168.100.52 (IP addresses are allocated after installation OS).
+
+            .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Network%20Node/3.Network%20Node%20NW3.png
+
           4. eth3 - NAT - for internet connection.(DHCP - auto allocate IP address while installing OS).
+
+            .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Network%20Node/4.Network%20Node%20NAT.png
 
 
         **For bridged connections** Create three NIC's connect them to bridge network as done above.
@@ -340,8 +348,17 @@ There are two different types of configurations that are possible for setting up
 
 
           1. eth0 - OpenStack Management Network - 100.10.10.53 (IP addresses are not allocated now)
+
+            .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Compute%20Node/1.Compute%20Node%20NW1.png
+
           2. eth1 - OpenStack VM Conf. Network - 100.20.20.53 (IP addresses are not allocated now)
+
+            .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Compute%20Node/2.Compute%20Node%20NW2.png
+
           3. eth2 - NAT - for internet connection.
+
+            .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/2.Setup%20VM/Compute%20Node/3.Compute%20Node%20NW-NAT.png
+
 
 
         **For bridged connections** Create two NIC's connect them to bridge network as done above.
@@ -466,18 +483,18 @@ Configure your network by editing :: /etc/network/interfaces file
     auto lo
     iface lo inet loopback
     
-    # The primary network interface - Virtual Box NAT connection
+    # The primary network interface - VMware NAT connection
     auto eth2
     iface eth2 inet dhcp
     
-    # Virtual Box vboxnet0 - Openstack Management Network
+    # VMware vmnet5 - Openstack Management Network
     auto eth0
     iface eth0 inet static
     address 100.10.10.51
     netmask 255.255.255.0
     gateway 100.10.10.1
   
-    # Virtual Box vboxnet2 - for exposing Openstack API over external network
+    # VMware vmnet7 - for exposing Openstack API over external network
     auto eth1
     iface eth1 inet static
     address 192.168.100.51
@@ -524,26 +541,26 @@ For the remaining Installation Follow `OpenStack-Folsom-Install-guide 2. Control
     auto lo
     iface lo inet loopback
 
-    # The primary network interface - Virtual Box NAT connection
+    # The primary network interface - VMware NAT connection
     auto eth3
     iface eth3 inet dhcp
 
 
-    # vboxnet0  - OpenStack Management Netowork
+    # VMware vmnet5  - OpenStack Management Netowork
     auto eth0
     iface eth0 inet static
     address 100.10.10.52
     netmask 255.255.255.0
     gateway 100.10.10.1
 
-    # vboxnet1 - OpenStack VM Conf. Network
+    # VMWare vmnet6 - OpenStack VM Conf. Network
     auto eth1
     iface eth1 inet static
     address 100.20.20.52
     netmask 255.255.255.0
     gateway 100.20.20.1
 
-    # vboxnet2 - Expose OpenStack API's to external network.
+    # VMware vmnet7 - Expose OpenStack API's to external network.
     auto eth2
     iface eth2 inet static
     address 192.168.100.52
@@ -590,18 +607,18 @@ For the remaining Installation Follow `OpenStack-Folsom-Install-guide 3. Network
     auto lo
     iface lo inet loopback
     
-    # The primary network interface - Virtual Box NAT connection
+    # The primary network interface - VMware NAT connection
     auto eth2
     iface eth2 inet dhcp
     
-    # Virtual Box vboxnet0 - Openstack Management Network
+    # VMware vmnet5 - Openstack Management Network
     auto eth0
     iface eth0 inet static
     address 100.10.10.53
     netmask 255.255.255.0
     gateway 100.10.10.1
     
-    # Virtual Box vboxnet1 - for exposing Openstack API over external network
+    # VMware vmnet6 - for exposing Openstack API over external network
     auto eth1
     iface eth1 inet static
     address 100.20.20.53
@@ -617,12 +634,16 @@ After Finishing With the Guide's Steps ... please do the following Changes.
 9.3 KVM
 ------------------
 
-* your hardware does not support virtualization because it is a virtual machine itselves ::
+* If your host supports virtualization because VMware supports virtualization inside virtual machines ::
 
    apt-get install cpu-checker
    kvm-ok
 
-* If you are using VMWare then you may get a good response. install 
+* If you are using VMWare then you may get a good response. Then keep /etc/noca/nova-compute.conf as::
+    
+    [DEFAULT]
+    libvirt_type=kvm
+  
 
 * Edit /etc/nova/nova-compute.conf file again and change 'kvm' to 'qemu' leave the rest as it is::
    
