@@ -173,50 +173,48 @@ There are two different types of configurations that are possible for setting up
   **Note:** If you are using Bridged Connections Please Ignore this section.
 
 * Step 1:
-    Start **Virtual Box**
+    Start **VMware**
 
 * Step 2:
-    **File>Preferences** 
-    Select **Network** Option.
-* Step 3: 
-    Click on **Create Host Only Networks** - Create three networks. They will be automatically named as
-      vboxnet0, vboxnet1, vboxnet2
-        
-      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/1-Create%20Host%20only%20Network.png
+    **Edit>Virtual Network Editor** 
+    Click On **Add Network...** Button.
+    Name the Host-only connection as vmnet5
 
-* Step 4:
-  *  Select vboxnet0 and click on edit, select **Adapter Tab**
-       Set the IPv4 address as  **100.10.10.1**
-        Leave the other options as it is.
-      
-     .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/2-Give%20Static%20Ip%20to%20Host.png
-    
-  *  Select **DHCP Server** tab
-       Unselect the **Enable Server** option.
-            
-     .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/3-%20Configure%20DHCP.png
+* Step 3: 
+    Click on **Host-only** Option
+    Deselect **Use Local DHCP ...** option under vmnet5.
+
+* Step 4: 
+    Select **Connect a host virtual adapter...** 
+    Fill in **Subnet IP:** as **100.10.10.0**
+        
+    Refer the following Image to setup vmnet5 - this is your OpenStack Management Network!!!
+
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/1.Virtual%20Network/Management%20NW.png
 
 * Step 5:
-  * Select vboxnet1 and click on edit, select **Adapter Tab**
-      Set the IPv4 address as **100.20.20.1**
-        Leave the other options as it is.
-  * Select **DHCP Server** tab
-        Unselect the **Enable Server** option.
+    Similarly Create two more **Host-only** Connections 
+    
+    **vmnet6** with **Subnet IP**: as **100.20.20.0**
+    Deselect **Use Local DHCP ...** option under vmnet6.
+    
+    Refer the following Image to setup vmnet5 - this is your OpenStack VM Conf. Network!!!
 
-* Step 6:
-  * Select vboxnet2 and click on edit, select **Adapter Tab**
-      Set the IPv4 address as **192.168.100.1**
-        Leave the other options as it is.
-  * Select **DHCP Server** tab
-        Unselect the **Enable Server** option.
+    .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/1.Virtual%20Network/VM%20Config.png
+
+    and
+
+    **vmnet7** with **Subnet IP**: as **192.168.100.0**
+    Deselect **Use Local DHCP ...** option under vmnet7.
+
+    Refer the following Image to setup vmnet5 - this is your OpenStack Externetwork - To expose OpenStack API over internet.!!!
+
+    .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/ScreenShots/1.Virtual%20Network/Externetwork.png
+
 
 * Step 7:
-  * Open terminal on your host `Alt+Ctrl+T` and type **Ifconfig** you should get something similar to the following output. The Networks are Highlited.
-    
-    .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/1.%20Virtual%20Network/4-Check%20Network%20Adapters.png
-
+  * Open terminal on your host `Alt+Ctrl+T` and type **Ifconfig** you should be able to see vmnet5,vmnet6,vmnet7 along with other networks.
   
-  * If you are not-sure of what you are doing - Note the IP-Address on your host should match to the one in the above snap.
 
 **2. Set up Network Interface Cards(NIC) on Virtual Machines** :
 ------------      
@@ -228,7 +226,7 @@ There are two different types of configurations that are possible for setting up
 
  
       +-----------------------------+--------------------------+-----------+------------------+
-      | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+      | VMware Network Adapter      | VMware Network Name      | NIC-Name  | Ipaddress        |
       +=============================+==========================+===========+==================+
       |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.51     |  
       +-----------------------------+--------------------------+-----------+------------------+
@@ -252,7 +250,7 @@ There are two different types of configurations that are possible for setting up
         
  
       +-----------------------------+--------------------------+-----------+------------------+
-      | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+      | VMware Network Adapter      | VMware Network Name      | NIC-Name  | Ipaddress        |
       +=============================+==========================+===========+==================+
       |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.51     |  
       +-----------------------------+--------------------------+-----------+------------------+
@@ -284,7 +282,7 @@ There are two different types of configurations that are possible for setting up
 
            
           +-----------------------------+--------------------------+-----------+------------------+
-          | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+          | VMware Network Adapter      | VMware Network Name      | NIC-Name  | Ipaddress        |
           +=============================+==========================+===========+==================+
           |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.52     |  
           +-----------------------------+--------------------------+-----------+------------------+
@@ -305,7 +303,7 @@ There are two different types of configurations that are possible for setting up
 
  
            +-----------------------------+--------------------------+-----------+------------------+
-           | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+           | VMware Network Adapter      | VMware Network Name      | NIC-Name  | Ipaddress        |
            +=============================+==========================+===========+==================+
            |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.52     |  
            +-----------------------------+--------------------------+-----------+------------------+
@@ -331,7 +329,7 @@ There are two different types of configurations that are possible for setting up
         **For Host-Only Connections** Create four NIC's 
 
           +-----------------------------+--------------------------+-----------+------------------+
-          | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+          | VMware Network Adapter      | VMware Network Name      | NIC-Name  | Ipaddress        |
           +=============================+==========================+===========+==================+
           |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.53     |  
           +-----------------------------+--------------------------+-----------+------------------+
@@ -349,7 +347,7 @@ There are two different types of configurations that are possible for setting up
         **For bridged connections** Create two NIC's connect them to bridge network as done above.
 
            +-----------------------------+--------------------------+-----------+------------------+
-           | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+           | VMware Network Adapter      | VMware Network Name      | NIC-Name  | Ipaddress        |
            +=============================+==========================+===========+==================+
            |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.53     |  
            +-----------------------------+--------------------------+-----------+------------------+
