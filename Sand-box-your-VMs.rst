@@ -130,9 +130,9 @@ There are two different types of configurations that are possible for setting up
 
 * The following are the host only connections that you will be setting up later on :
 
-  1. vboxnet1 - Openstack Management Network - Host static IP 100.10.10.1 
-  2. vboxnet2 - VM Conf. Network - Host Static IP 100.20.20.1
-  3. vboxnet3 - VM External Network Access (Host Machine)
+  1. vboxnet0 - Openstack Management Network - Host static IP 100.10.10.1 
+  2. vboxnet1 - VM Conf. Network - Host Static IP 100.20.20.1
+  3. vboxnet2 - VM External Network Access (Host Machine)
 
     .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/Diagrams/WIth%20Host%20only%20NetWork%20Connection.png
 
