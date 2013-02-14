@@ -130,9 +130,9 @@ There are two different types of configurations that are possible for setting up
 
 * The following are the host only connections that you will be setting up later on :
 
-  1. vboxnet1 - Openstack Management Network - Host static IP 100.10.10.1 
-  2. vboxnet2 - VM Conf. Network - Host Static IP 100.20.20.1
-  3. vboxnet3 - VM External Network Access (Host Machine)
+  1. vboxnet0 - Openstack Management Network - Host static IP 100.10.10.1 
+  2. vboxnet1 - VM Conf. Network - Host Static IP 100.20.20.1
+  3. vboxnet2 - VM External Network Access (Host Machine)
 
     .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/Diagrams/WIth%20Host%20only%20NetWork%20Connection.png
 
@@ -228,7 +228,7 @@ There are two different types of configurations that are possible for setting up
 
  
       +-----------------------------+--------------------------+-----------+------------------+
-      | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+      | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
       +=============================+==========================+===========+==================+
       |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.51     |  
       +-----------------------------+--------------------------+-----------+------------------+
@@ -252,7 +252,7 @@ There are two different types of configurations that are possible for setting up
         
  
       +-----------------------------+--------------------------+-----------+------------------+
-      | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+      | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
       +=============================+==========================+===========+==================+
       |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.51     |  
       +-----------------------------+--------------------------+-----------+------------------+
@@ -284,7 +284,7 @@ There are two different types of configurations that are possible for setting up
 
            
           +-----------------------------+--------------------------+-----------+------------------+
-          | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+          | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
           +=============================+==========================+===========+==================+
           |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.52     |  
           +-----------------------------+--------------------------+-----------+------------------+
@@ -305,7 +305,7 @@ There are two different types of configurations that are possible for setting up
 
  
            +-----------------------------+--------------------------+-----------+------------------+
-           | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+           | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
            +=============================+==========================+===========+==================+
            |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.52     |  
            +-----------------------------+--------------------------+-----------+------------------+
@@ -331,7 +331,7 @@ There are two different types of configurations that are possible for setting up
         **For Host-Only Connections** Create four NIC's 
 
           +-----------------------------+--------------------------+-----------+------------------+
-          | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+          | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
           +=============================+==========================+===========+==================+
           |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.53     |  
           +-----------------------------+--------------------------+-----------+------------------+
@@ -349,7 +349,7 @@ There are two different types of configurations that are possible for setting up
         **For bridged connections** Create two NIC's connect them to bridge network as done above.
 
            +-----------------------------+--------------------------+-----------+------------------+
-           | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+           | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
            +=============================+==========================+===========+==================+
            |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.53     |  
            +-----------------------------+--------------------------+-----------+------------------+
@@ -640,12 +640,13 @@ After Finishing With the Guide's Steps ... please do the following Changes.
 ==============
 
 * On any condition do not restart - shutdown your VM's, just Save the machine state.
+* Try not to modify virtual machines LAN card's mac address, it will requrie you to modify your network interfaces page.
 
 
 11. Licensing
 ============
 
-OpenStack Folsom Install Guide by Bilel Msekni is licensed under a Creative Commons Attribution 3.0 Unported License.
+OpenStack Folsom VM SandBox Guide by Pranav Salunke is licensed under a Creative Commons Attribution 3.0 Unported License.
 
 .. image:: http://i.imgur.com/4XWrp.png
 To view a copy of this license, visit [ http://creativecommons.org/licenses/by/3.0/deed.en_US ].
@@ -661,7 +662,8 @@ Bilel Msekni: bilel.msekni@telecom-sudparis.eu
 
 This work has been supported by:
 
-* 
+* Cloud Rack - Checkout Cloud Rack at -[https://github.com/cloud-rack]
+* Manoj-Gudi - A Hacker friend of mine !!! - check his repo at - [https://github.com/manojgudi]
 
 14. Credits
 =================
