@@ -27,12 +27,13 @@ Table of Contents
   7. Controller Node
   8. Network Node
   9. Compute Node
-  10. Word Of Advice.
-  11. Licensing
-  12. Contacts
-  13. Acknowledgment
-  14. Credits
-  15. To do
+  10. Launch OpenStack Horizon Dashboard
+  11. Word Of Advice
+  12. Licensing
+  13. Contacts
+  14. Acknowledgment
+  15. Credits
+  16. To do
 
 0. What is it?
 ==============
@@ -635,15 +636,20 @@ After Finishing With the Guide's Steps ... please do the following Changes.
 
 **Note :** This is for SandBoxing purposes only. Ideal for learning and testing, checking out OpenStack. If you want proper working you must have physical machines working.
 
+10. Launch OpenStack Horizon Dashboard
+==============
+Open browser on your Host Machine and paste the following link http://192.168.100.51/horizon and you should see login page.
 
-10. Word Of Advice.
+.. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/4.Final%20Step/Final.png
+
+11. Word Of Advice.
 ==============
 
 * On any condition do not restart - shutdown your VM's, just Save the machine state.
 * Try not to modify virtual machines LAN card's mac address, it will requrie you to modify your network interfaces page.
 
 
-11. Licensing
+12. Licensing
 ============
 
 OpenStack Folsom VM SandBox Guide by Pranav Salunke is licensed under a Creative Commons Attribution 3.0 Unported License.
@@ -651,13 +657,13 @@ OpenStack Folsom VM SandBox Guide by Pranav Salunke is licensed under a Creative
 .. image:: http://i.imgur.com/4XWrp.png
 To view a copy of this license, visit [ http://creativecommons.org/licenses/by/3.0/deed.en_US ].
 
-12. Contacts
+13. Contacts
 ===========
 
 Pranav Salunke: pps.pranav@gmail.com
 Bilel Msekni: bilel.msekni@telecom-sudparis.eu
 
-13. Acknowledgment
+14. Acknowledgment
 =================
 
 This work has been supported by:
@@ -665,7 +671,7 @@ This work has been supported by:
 * Cloud Rack - Checkout Cloud Rack at -[https://github.com/cloud-rack]
 * Manoj-Gudi - A Hacker friend of mine !!! - check his repo at - [https://github.com/manojgudi]
 
-14. Credits
+15. Credits
 =================
 
 This work has been based on:
@@ -675,7 +681,7 @@ This work has been based on:
 * OpenStack Documentation [http://docs.openstack.org/trunk/openstack-compute/install/apt/content/]
 * OpenStack Quantum Install [http://docs.openstack.org/trunk/openstack-network/admin/content/ch_install.html]
 
-15. To do
+16. To do
 =======
 
 This guide is just a startup. Your suggestions are always welcomed.
