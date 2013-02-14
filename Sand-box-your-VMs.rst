@@ -228,7 +228,7 @@ There are two different types of configurations that are possible for setting up
 
  
       +-----------------------------+--------------------------+-----------+------------------+
-      | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+      | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
       +=============================+==========================+===========+==================+
       |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.51     |  
       +-----------------------------+--------------------------+-----------+------------------+
@@ -252,7 +252,7 @@ There are two different types of configurations that are possible for setting up
         
  
       +-----------------------------+--------------------------+-----------+------------------+
-      | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+      | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
       +=============================+==========================+===========+==================+
       |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.51     |  
       +-----------------------------+--------------------------+-----------+------------------+
@@ -284,7 +284,7 @@ There are two different types of configurations that are possible for setting up
 
            
           +-----------------------------+--------------------------+-----------+------------------+
-          | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+          | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
           +=============================+==========================+===========+==================+
           |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.52     |  
           +-----------------------------+--------------------------+-----------+------------------+
@@ -305,7 +305,7 @@ There are two different types of configurations that are possible for setting up
 
  
            +-----------------------------+--------------------------+-----------+------------------+
-           | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+           | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
            +=============================+==========================+===========+==================+
            |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.52     |  
            +-----------------------------+--------------------------+-----------+------------------+
@@ -331,7 +331,7 @@ There are two different types of configurations that are possible for setting up
         **For Host-Only Connections** Create four NIC's 
 
           +-----------------------------+--------------------------+-----------+------------------+
-          | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+          | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
           +=============================+==========================+===========+==================+
           |  Adapter 1                  | Host Only/vboxnet0       | eth0      | 100.10.10.53     |  
           +-----------------------------+--------------------------+-----------+------------------+
@@ -349,7 +349,7 @@ There are two different types of configurations that are possible for setting up
         **For bridged connections** Create two NIC's connect them to bridge network as done above.
 
            +-----------------------------+--------------------------+-----------+------------------+
-           | Virtual Box Network Adapter | Virtual Box Network Name | Nic-Name  | Ipaddress        |
+           | Virtual Box Network Adapter | Virtual Box Network Name | NIC-Name  | Ipaddress        |
            +=============================+==========================+===========+==================+
            |  Adapter 1                  | Bridged Adapter          | eth0      | 100.10.10.53     |  
            +-----------------------------+--------------------------+-----------+------------------+
