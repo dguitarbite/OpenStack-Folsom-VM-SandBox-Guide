@@ -120,7 +120,7 @@ There are two different types of configurations that are possible for setting up
 
 
 
-.. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/Diagrams/With%20Bridged%20Network%20Connection.jpeg
+.. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/Diagrams/With%20Bridged%20Network%20Connection.jpeg
 
 **Note:** If you are using bridged connections you may skip this section as there is no need to set up host-only connections.
 
@@ -134,7 +134,7 @@ There are two different types of configurations that are possible for setting up
   2. vboxnet2 - VM Conf. Network - Host Static IP 100.20.20.1
   3. vboxnet3 - VM External Network Access (Host Machine)
 
-    .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/Diagrams/WIth%20Host%20only%20NetWork%20Connection.png
+    .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VMware/Images/Diagrams/WIth%20Host%20only%20NetWork%20Connection.png
 
 
 2. Setup Your VM Environment
