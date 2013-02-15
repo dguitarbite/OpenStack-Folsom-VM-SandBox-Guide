@@ -27,3 +27,12 @@ Happy Stacking!!!
 **Note :** If you are looking forward to learn Virtualization or OpenStack this is not a good place for you to start with.
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">OpenStack-Folsom-VM-SandBox-Gudie</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="dguitarbite" property="cc:attributionName" rel="cc:attributionURL">Dgutirbite</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/mseknibilel/OpenStack-Folsom-Install-guide" rel="dct:source">https://github.com/mseknibilel/OpenStack-Folsom-Install-guide</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="pps.pranav@gmail.com" rel="cc:morePermissions">pps.pranav@gmail.com</a>.
+
+<p xmlns:dct="http://purl.org/dc/terms/">
+<a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
+<img src="http://i.creativecommons.org/p/mark/1.0/88x31.png"
+     style="border-style: none;" alt="Public Domain Mark" />
+</a>
+<br />
+This work (<span property="dct:title">OpenStack-Folsom-VM-Install-Guide</span>, by <a href="https://github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide" rel="dct:creator"><span property="dct:title">Dguitarbite</span></a>), identified by <a href="http://dguitarbite.github.com/dguitarbite/" rel="dct:publisher"><span property="dct:title">Pranav Salunke</span></a>, is free of known copyright restrictions.
+</p>
