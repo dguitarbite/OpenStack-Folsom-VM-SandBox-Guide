@@ -338,7 +338,7 @@ There are two different types of configurations that are possible for setting up
           +-----------------------------+--------------------------+-----------+------------------+
           |  Adapter 2                  | Host Only/vboxnet1       | eth1      | 100.20.20.53     |
           +-----------------------------+--------------------------+-----------+------------------+
-          |  Adapter 3                  | NAT                      | eth3      | DHCP(auto-assign)|
+          |  Adapter 3                  | NAT                      | eth2      | DHCP(auto-assign)|
           +-----------------------------+--------------------------+-----------+------------------+
 
 
