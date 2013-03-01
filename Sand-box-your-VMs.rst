@@ -405,7 +405,7 @@ There are two different types of configurations that are possible for setting up
 
 2. Quantum/Network Node: Install **SSH server** when asked for **Custom Software to Install**. Rest of the packages are not required and may come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
 
-3. Control Node: Install **SSH server** and **Virtual Machines Host** when asked for **Custom Software to Install**. Rest of the packages are not required and may come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
+3. Compute Node: Install **SSH server** and **Virtual Machines Host** when asked for **Custom Software to Install**. Rest of the packages are not required and may come in the way of OpenStack packages - like DNS servers etc. (not necessary). Unless you know what you are doing.
 
 
 6. Its about to get sticky
