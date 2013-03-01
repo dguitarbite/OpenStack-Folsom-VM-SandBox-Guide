@@ -240,11 +240,13 @@ There are two different types of configurations that are possible for setting up
 
       Create a new Virtual Machine ... select the appropriate options
       
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/2.%20Setup%20VM/Control%20Node/1-%20Basic%20Info.png
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/1-%20Basic%20Info.png
     
       Ram Required for this node is 512 MB (minimum recommended for Ubuntu Server 12.XX), if you have more ram feel free to allocate itbut remember that your Compute Node needs
       the highest amount of RAM and Processor so I usually save up for the compute node...reduce the processor allocation pool
       
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/2.%20Setup%20VM/Control%20Node/2-%20Resource%20Allocation.png
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/2-%20Resource%20Allocation.png
     
     For **Bridged Connections** 
@@ -260,21 +262,25 @@ There are two different types of configurations that are possible for setting up
       |  Adapter 2                  | Bridged Adapter          | eth1      | 198.168.100.51   |
       +-----------------------------+--------------------------+-----------+------------------+
       
+        .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/2.%20Setup%20VM/Control%20Node/7-%20Bridge%20Connection.png
         .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/7-%20Bridge%20Connection.png
       
         Note: Internet is available to bridged connected VM's directly so no need to setup a seperate NIC for internet.
     
     For **Host Only Connections** set up three NIC cards as per the given diagram.
       eth0 - OpenStack Management Network - 100.10.10.51 (IP addresses are not allocated now)
-      
+
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/2.%20Setup%20VM/Control%20Node/3-%20control-nw1.png
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/3-%20control-nw1.png
       
       eth1 - Expose OpenStack API - 192.168.100.51 (IP addresses are not allocated now)
       
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/2.%20Setup%20VM/Control%20Node/4%20-%20control-nw2.png
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/4%20-%20control-nw2.png
       
       eth2 - Virtual Box NAT (Network Address Translation) - for internet Connection. (IP addresses are not allocated now)
       
+      .. image:: https://raw.github.com/dguitarbite/OpenStack-Folsom-VM-SandBox-Guide/VirtualBox/Images/ScreenShots/2.%20Setup%20VM/Control%20Node/5%20-control-nw3.png
       .. image:: https://raw.github.com/cloud-rack/cloud-rack-docs/master/ScreenShots/2.%20Setup%20VM/Control%20Node/5%20-control-nw3.png
 
 * Step 2:
@@ -686,3 +692,4 @@ This work has been based on:
 
 This guide is just a startup. Your suggestions are always welcomed.
 
+There are other ways of configuring your VM's. You can also have a mixture of 
