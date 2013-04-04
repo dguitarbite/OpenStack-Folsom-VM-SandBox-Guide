@@ -2,7 +2,9 @@ OpenStack-Folsom-VM-SandBox-Guide
 =================================
 
  This Guide is for Stackers who want to Sand Box OpenStack Folsom in Virtual Box or Vmware.
- 
+
+* Grizzly is here - so what are you waiting for ? [Sandbox Grizzly] (https://github.com/dguitarbite/OpenStack-Grizzly-VM-SandBox-Guide)
+
 * A short Decription:
  
   * [VMware] (https://www.vmware.com/) is one of the virtualization softwares which will provide a simple UI for the same. Its closed source and you will have to buy it. It is a bit more user-friendly than Virtual Box but it comes with a cost. 
